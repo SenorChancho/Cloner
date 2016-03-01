@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/privacy.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex,follow" />
+    <title>{{title}}</title>
+    <link href="CSS/reset.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/screen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="main">
+    <div id="header">
+        <a href="index.html" id="logo">
+        <img src="images/logo.png" alt=""></a>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+    </div>
+    <div id="body">
+        <div id="menu">
+            <div>
+                <h2>Subscribe!</h2>
+                <br>
+                <input class="input" type="text" value="Enter your email here" onblur="if(this.value=='') this.value='Enter your email here'" onFocus="if(this.value =='Enter your email here' ) this.value=''" >
+                <br><br>
+                <a href="index.html" onClick="return alert('Thank you for subscribing!')">Subscribe</a>
+            </div>
+            <div>
+                <h2>Also Check Out...</h2>
+                <br>
+                <ul>
+                    <li>
+                        <a href="blog1.html">
+                            {{article1_title}} <br>
+                            <img src="images/blog1.jpg" alt="" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog3.html">
+                            {{article3_title}}
+                            <img src="images/blog3.jpg" alt="" width="150" height="150">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="content">
+
+            <div class="post">
+                <div class="info">
+                    <p class="date">October 17, 2015</p>
+                </div>
+                <div class="text">
+                    <h1><a href="privacy.html">Privacy Policy</a></h1>
+                    <p>At {{title}}, the privacy of our audience is extremely important to us. Like many other websites, {{title}} makes use of log files. The information contained in a log file includes Internet Protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referral/exit pages, and number of clicks-per-visitor. This data is used to analyze trends, administer the site, track user movement, and gather demographic information &ndash; so that we may offer our readers a more personalized experience.</p>
+
+                    <p>We do not sell, trade, or otherwise transfer your personally identifiable information to additional parties without your consent. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.</p>
+
+                    <p>Our third-party advertisers may use cookies for the purpose of delivering ad-related material to you, as our readers, based on your unique visits {{title}}.com. Please note: {{title}} has neither access to, nor control over, the cookies used by our advertisers.</p>
+
+                    <p>Our third-party advertising network servers may make use of forms of technology as a means of delivering featured advertisement links from our site directly to your browsers. These tools may also measure the effectiveness of their advertisements and/or to personalize the advertising content displayed on {{title}} and other sites; again, we have no control over the way in which these tools or methods are utilized by our third-party advertisers.</p>
+
+                    <p>To comply with the requirements of the Children&rsquo;s Online Privacy Protection Act (COPPA), we do not collect any information from anyone under 13 years of age. All editorial and advertisement content featured on {{title}} is age-appropriate for individuals who are at least 13 years old; however, our target audience consists of adults between the ages of 21-55.</p>
+
+                    <p>By using our site, you consent to {{title}}&rsquo; privacy policy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"> <span>&copy; by {{title}} 2015</span></div>
+</div>
+</body>
+</html>

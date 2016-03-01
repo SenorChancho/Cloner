@@ -1,0 +1,82 @@
+<!doctype html>
+<html  prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/index.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Home</title>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/favicon.gif" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+<body>
+<div class="bg">
+    <!--start container-->
+    <div id="container">
+        <!--start header-->
+        <header>
+            <!--start logo-->
+            <a href="index.html" id="logo"><img src="images/logo.png" alt="logo"/></a>
+            <!--end logo-->
+            <!--start menu-->
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!--end menu-->
+            <!--end header-->
+        </header>
+        <!--start intro-->
+        <section id="intro">
+                <h1>{{quote}}</h1>
+        </section>
+        <!--end intro-->
+        <!--start holder-->
+        <div class="holder_content">
+            <section class="group1">
+                <a href="about.html"><span class="button">About</span></a>
+                <a class="photo_hover3" href="about.html"><img src="images/about.jpg" width="240" height="214" alt="picture1"/></a>
+
+            </section>
+            <section class="group2">
+                <a href="blog.html"><span class="button">Blog</span></a>
+                <a class="photo_hover3" href="blog.html"><img src="images/blog.jpg" width="240" height="214" alt="picture1"/></a>
+
+            </section>
+            <section class="group3">
+                <a href="contact.html"><span class="button">Contact</span></a>
+                <a class="photo_hover3" href="contact.html"><img src="images/contact.jpg" width="240" height="214" alt="picture1"/></a>
+
+            </section>
+        </div>
+        <!--end holder-->
+        <!--start holder-->
+
+        <!--end holder-->
+    </div>
+    <!--end container-->
+    <!--start footer-->
+    <footer>
+        <div class="container">
+            <div id="FooterTwo"> © 2015 </div>
+            <div id="FooterTree"> {{title}} </div>
+        </div>
+    </footer>
+    <!--end footer-->
+</div>
+<!--end bg-->
+<!-- Free template distributed by http://freehtml5templates.com -->
+</body>
+</html>

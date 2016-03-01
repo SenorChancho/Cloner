@@ -1,0 +1,181 @@
+<!doctype html>
+<html  prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/contact.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+    <meta charset="utf-8">
+
+    <!-- TITLE OF SITE -->
+    <title>{{title}}</title>
+
+    <!-- META DATA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex,follow" />
+
+
+    <!-- =========================
+       STYLESHEETS
+    ============================== -->
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' rel='stylesheet'>
+
+    <!-- FLAT ICON -->
+    <link href='css/flaticon.css' rel='stylesheet'>
+    <link href='css/nprogress.css' rel='stylesheet'>
+
+    <!-- MEDIA ELEMENT AND PLAYER -->
+    <link rel="stylesheet" href="css/mediaelementplayer.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- COLOR SCEEMS -->
+     <link rel="stylesheet" href="css/colors/alizarin.css">
+
+    <!-- RESPONSIVE FIXES -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+</head>
+<body>
+<!-- =========================
+     HEADER SECTION
+============================== -->
+<header class="header">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-24">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <!-- YOUR LOGO -->
+                            <img src="images/logo.png" width="1000" height="450" alt="Reader">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /END FLUID CONTAINER -->
+    </nav>
+</header>
+<!-- /END HEADER SECTION  -->
+
+
+<!-- BODY CONTAINER - FULL WIDTH -->
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- =========================
+             LEFT SIDEBAR - NAVIGATION
+        ============================== -->
+        <aside class="left-sidebar hidden-xs">
+            <div class="col-md-4 col-sm-6 items">
+                <div class="about-us">
+                    <h4>About {{title}}</h4>
+                    <p>{{about}}</p>
+                </div>
+                <nav class="left-navigation">
+                    <ul>
+                        <li><h4><a href="privacy.html">Privacy Policy</a></h4></li>
+                        <li><h4><a href="contact.html">Contact</a></h4></li>
+                    </ul>
+                </nav> <!-- end of .left-navigation -->
+                <p class="copyright">Copyright 2015. &copy; <a href="#">{{title}}</a></p>
+
+            </div>
+        </aside>
+        <!-- /END LEFT SIDEBAR - NAVIGATION -->
+
+
+        <!-- =========================
+             BLOG SECTION
+        ============================== -->
+        <div class="col-md-14 col-sm-18">
+            <div class="blog-style-one content-to-load">
+                <!-- GENERAL BLOG POST -->
+                <article class="blog-item">
+                    <div id="contactHeader">
+                    <h2><span>Contact Form</span></h2>
+                    </div>
+                    <form id="ContactForm">
+                        <div>
+                            <div class="wrapper">
+                                <span>Your Name:</span><input type="text" class="input">
+                            </div>
+                            <div class="wrapper">
+                                <span>Your E-mail:</span><input type="text" class="input" >
+                            </div>
+                            <div class="textarea_box">
+                                <span>Your Message:</span><textarea name="textarea" cols="1" rows="1"></textarea>
+                            </div>
+                            <a href="contact.html" onClick="return alert('Thank you for your email!')">Send</a>
+                            <br>
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </div>
+        <!-- /END BLOG SECTION -->
+
+
+
+        <!-- =========================
+             RIGHT SIDEBAR
+        ============================== -->
+        <div class="col-md-6 hidden-sm hidden-xs">
+            <aside class="right-sidebar">
+                <!-- Widget Start -->
+                <div class="widget-popular-article">
+                    <h5>{{action}}</h5>
+                    <form id="newsletter_form">
+                        <div class="wrapper">
+                            <input class="input" type="text" value="Enter your email here" onblur="if(this.value=='') this.value='Enter your email here'" onFocus="if(this.value =='Enter your email here' ) this.value=''" >
+                        </div>
+                        <br>
+                        <a href="index.html" onClick="return alert('Thank you for subscribing!')">Subscribe</a>
+                    </form>
+                    <hr>
+                    <h5>Popular Articles</h5>
+                    <div class="popular-article clearfix">
+                        <div class="article-link">
+                            <a href="blog3.html">{{article3_title}} - 7 days ago
+                                <br> <img src="images/blog3.jpg" alt="" width="225" height="154"></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="popular-article clearfix">
+                        <div class="article-link">
+                            <a href="blog1.html">{{article1_title}} - 10 days ago
+                                <br> <img src="images/blog1.jpg" alt="" width="225" height="154"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Widget End -->
+            </aside>
+        </div>
+        <!-- /END RIGHT SIDEBAR -->
+    </div>
+</div>
+<!-- /END BODY CONTAINER - FULL WIDTH -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Cloner</title>
+</head>
+<body>
+<!--<h1>Balling Cloner</h1>-->
+<img id="clonerLogo" src="/images/logo.png" alt="">
+
+<form action="/" method="post" enctype="multipart/form-data">
+    <label for="template">Template</label>
+    <select name="templateType" id="template">
+        <option value="Life and Beauty">Life and Beauty</option>
+        <option value="Strong Evo">Strong Evo</option>
+        <option value="Challenger Fit Blog">Challenger Fit Blog</option>
+        <option value="Pure Hair Salon">Pure Hair Salon</option>
+    </select>
+
+    <label for="safe_site_name">Safe Site Name</label>
+    <input type="text" id="safe_site_name" name="safe_site_name" required>
+
+    <label for="logo">Logo</label>
+    <input class="drop" type="file" id="logo" name="logo" required>
+
+    <label for="writer_name">Writer Name</label>
+    <input type="text" id="writer_name" name="writer_name" required>
+
+    <label for="about">About</label>
+    <textarea name="about" id="about" cols="25" rows="10"></textarea>
+
+    <label for="about_photo">About Photo</label>
+    <input class="drop" type="file" name="about_photo" id="about_photo" required>
+
+    <label for="contact">Contact</label>
+    <input type="text" name="contact" id="contact" required>
+
+    <label for="contact_photo">Contact Photo</label>
+    <input class="drop" type="file" name="contact_photo" id="contact_photo" required>
+
+    <label for="blog_photo">Blog Photo</label>
+    <input class="drop" type="file" name="blog_photo" id="blog_photo" required>
+
+    <label for="quote">Quote</label>
+    <input type="text" name="quote" id="quote" required>
+
+    <label for="who_we_are">Who we are</label>
+    <input type="text" name="who_we_are" id="who_we_are" required>
+
+    <label for="what_we_do">What we do</label>
+    <input type="text" name="what_we_do" id="what_we_do" required>
+
+    <label for="stay_in_touch">Stay in touch</label>
+    <input type="text" name="stay_in_touch" id="stay_in_touch" required>
+
+    <fieldset>
+        <label for="article1_title">First Article Title</label>
+        <input type="text" name="article1_title" id="article1_title" required>
+
+        <label for="article1">First Article</label>
+        <textarea name="article1" id="article1" cols="25" rows="10" required></textarea>
+
+        <label for="article1_photo">First Article Photo</label>
+        <input class="drop adjust" type="file" name="article1_photo" id="article1_photo" required>
+    </fieldset>
+
+    <fieldset>
+        <label for="article2_title">Second Article Title</label>
+        <input type="text" name="article2_title" id="article2_title" required>
+
+        <label for="article2">Second Article</label>
+        <textarea name="article2" id="article2" cols="25" rows="10" required></textarea>
+
+        <label for="article2_photo">Second Article Photo</label>
+        <input class="drop adjust" type="file" name="article2_photo" id="article2_photo" required>
+    </fieldset>
+
+    <fieldset>
+        <label for="article3_title">Third Article Title</label>
+        <input type="text" name="article3_title" id="article3_title" required>
+
+        <label for="article3">Third Article</label>
+        <textarea name="article3" id="article3" cols="25" rows="10" required></textarea>
+
+        <label for="article3_photo">Third Article Photo</label>
+        <input class="drop adjust" type="file" name="article3_photo" id="article3_photo" required>
+    </fieldset>
+
+    <label for="action_phrase">Action Phrase</label>
+    <input type="text" name="action_phrase" id="action_phrase" required>
+
+    <button id="createClone" type="submit">Create Clone</button>
+</form>
+
+<h3>Downloads</h3>
+<button id="clear">clear</button>
+<ul id="downloads">
+    {{downloadLink}}
+</ul>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var $template = $('#template');
+
+    $template.change(function() {
+        var selectedValue = $('#template').val();
+
+        var $contact = $('#contact');
+        var $contactLabel = $('label[for=contact], input#contact');
+        var $contactPhoto = $('#contact_photo');
+        var $contactPhotoLabel = $('label[for=contact_photo], input#contact_photo');
+        var $blogPhoto = $('#blog_photo');
+        var $blogPhotoLabel = $('label[for=blog_photo], input#blog_photo');
+        var $aboutPhoto = $('#about_photo');
+        var $aboutPhotoLabel = $('label[for=about_photo], input#about_photo');
+        var $quote = $('#quote');
+        var $quoteLabel = $('label[for=quote], input#quote');
+        var $whoWeAre = $('#who_we_are');
+        var $whoWeAreLabel = $('label[for=who_we_are], input#who_we_are');
+        var $whatWeDo = $('#what_we_do');
+        var $whatWeDoLabel = $('label[for=what_we_do], input#what_we_do');
+        var $stayInTouch = $('#stay_in_touch');
+        var $stayInTouchLabel = $('label[for=stay_in_touch], input#stay_in_touch');
+
+        $contact.hide().prop('required', false);
+        $contactLabel.hide();
+
+        $contactPhoto.hide().prop('required', false);
+        $contactPhotoLabel.hide();
+
+        $blogPhoto.hide().prop('required', false);
+        $blogPhotoLabel.hide();
+
+        $aboutPhoto.hide().prop('required', false);
+        $aboutPhotoLabel.hide();
+
+        $quote.hide().prop('required', false);
+        $quoteLabel.hide();
+
+        $whoWeAre.hide().prop('required', false);
+        $whoWeAreLabel.hide();
+
+        $whatWeDo.hide().prop('required', false);
+        $whatWeDoLabel.hide();
+
+        $stayInTouch.hide().prop('required', false);
+        $stayInTouchLabel.hide();
+
+
+        switch (selectedValue) {
+            case "Strong Evo":
+                break;
+            case "Challenger Fit Blog":
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
+                break;
+            case "Pure Hair Salon":
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $contactPhoto.show().prop('required', true);
+                $contactPhotoLabel.show();
+
+                $blogPhoto.show().prop('required', true);
+                $blogPhotoLabel.show();
+
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
+
+                $quote.show().prop('required', true);
+                $quoteLabel.show();
+                break;
+            case "Life and Beauty":
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
+
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $whoWeAre.show().prop('required', true);
+                $whoWeAreLabel.show();
+
+                $whatWeDo.show().prop('required', true);
+                $whatWeDoLabel.show();
+
+                $stayInTouch.show().prop('required', true);
+                $stayInTouchLabel.show();
+                break;
+        }
+
+    });
+
+    $template.change();
+
+    $('#logo').change(function() {
+        var logoName = $('#logo').val().replace(/C:\\fakepath\\/i, '');
+        logoName = logoName.replace('.png', '');
+
+        $('#safe_site_name').val(logoName);
+    });
+
+    $('#clear').click(function() {
+        clearDownloads();
+        $.ajax({
+            url: "/clear",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            cache: false,
+            timeout: 5000,
+            complete: function() {
+                console.log('process complete');
+            },
+
+            success: function(data) {
+                console.log('process sucess');
+            },
+
+            error: function() {
+                console.log('process error');
+            }
+        });
+    });
+
+    function clearDownloads() {
+        var $downloads = $('#downloads');
+        console.log($downloads.html());
+
+        $downloads.empty();
+    }
+</script>
+</body>
+</html>

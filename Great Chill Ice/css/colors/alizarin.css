@@ -1,0 +1,43 @@
+/* GLOBALS */
+a {
+  color: darkred;
+}
+/* BUTTON */
+.btn-prime {
+  background: darkred;
+}
+/* ICONS */
+.social-icons ul li .fa:hover {
+  color: darkred;
+}
+/* CONTENT PROGRESSBAR */
+.progress .progress-bar {
+  background-color: darkred;
+}
+/* NAVIGATION */
+.header .navbar .main-navigation > ul > li a:hover {
+  color: darkred;
+}
+.header .navbar .main-navigation > ul > li > .dropdown-menu li a:hover {
+  background: darkred;
+}
+.header .navbar .main-navigation .navbar-nav .open > a {
+  color: darkred;
+}
+/* BLOG SECTION */
+.blog-item h2.title a:hover {
+  color: darkred;
+}
+/* BLOG COMMENT AREA */
+.comments-area .comments > ul li p a.author:hover,
+.comments-area .comments > ul li p a.reply:hover {
+  color: darkred;
+}
+.comments-area .comment-form .btn-prime:hover {
+  background: darkred;
+}
+/* PAGINATION */
+.navigate-page li:hover,
+.navigate-page li.active {
+  background: darkred;
+}

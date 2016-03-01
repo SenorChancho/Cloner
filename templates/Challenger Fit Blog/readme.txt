@@ -1,0 +1,4 @@
+General guidelines:
+1. Keep the logo img width at 750px
+2. Font used in logo is Cicle Semi (http://www.dafont.com/font.php?file=cicle&page=1&nb_ppp_old=10&text=Type+your+text+here&nb_ppp=10&psize=l&classt=alpha)
+3. In the top right corner of the template there are three links and one textspan. Links are meant to be main navigation on the page and the textspan is current location. This menu would "cycle", so that the location is moved to the bottom and becomes text, and previous location goes up and becomes a link. It is possible to add more than three links (or subtract some), but then "top" property of #header ul in screen.css must be modified.

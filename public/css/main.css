@@ -1,0 +1,78 @@
+form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px 40px;
+    background: rgba(132, 188, 63, 0.75);
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    display: block;
+    background: rgba(126, 182, 63,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 10px auto;
+    outline: 0;
+    padding: 15px;
+    width: 90%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(126, 182, 63, .03) inset;
+    margin-bottom: 30px;
+}
+
+input[type="file"],
+select {
+    display: block;
+    margin: 10px 0;
+    padding-bottom: 10px;
+}
+
+#clonerLogo {
+    width: 400px;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.drop {
+    width: 80%;
+    height: 20px;
+    border: 2px dashed black;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 25px 20px 0 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font: 21pt bold arial;
+    color: black;
+}
+
+.adjust {
+    padding-right: 50px;
+}
+
+.drop::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+fieldset {
+    border: 0;
+    background-color: rgba(64, 119, 55, 0.75);
+    margin: 10px;
+    border-radius: 8px;
+}

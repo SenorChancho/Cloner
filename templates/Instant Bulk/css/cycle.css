@@ -1,0 +1,9 @@
+/* 
+
+Instant Bulk - CSS File For Cycle JQuery
+
+*/
+#slide{background-image:url(../images/img_frame.gif); background-repeat:no-repeat; width:620px; height:344px; padding:7px;}
+.pics { height:300px; width:620px; padding:0px; margin:0px; overflow: hidden }
+.pics img{}
+

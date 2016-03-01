@@ -1,0 +1,16 @@
+/* 
+
+Instant Bulk - CSS File
+
+*/
+
+#top{background-image:url(../header/default.png);}
+
+#top_container, #footer_container{ background-color:#000;} /* background */
+
+h1, h2, #navigation ul li a, #navigation ul li a:visited, #navigation ul li a:hover, a, a:hover, .sidebar h2{color:black} /* font color */
+
+.sidebar ul{border-top:solid 5px #676464;} /* border color */ 
+
+
+
