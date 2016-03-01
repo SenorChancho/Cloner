@@ -204,7 +204,10 @@
     });
 
     $('#clear').click(function() {
-        clearDownloads();
+        var $downloads = $('#downloads');
+        console.log($downloads.html());
+
+        $downloads.empty();
         $.ajax({
             url: "/clear",
             type: "POST",
@@ -227,12 +230,6 @@
         });
     });
 
-    function clearDownloads() {
-        var $downloads = $('#downloads');
-        console.log($downloads.html());
-
-        $downloads.empty();
-    }
 </script>
 </body>
 </html>
