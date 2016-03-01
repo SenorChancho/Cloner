@@ -54,7 +54,9 @@ app.get('/', function(req, res) {
 });
 
 app.post('/clear', function(req, res) {
+    console.log('clear function called');
     fs.readdir('./public/', function (err, files) {
+
         files.forEach(function (file) {
             if (file.indexOf('.tar.gz') > 0) {
                 fs.unlink(path.join('./public/', file), function () {
@@ -62,6 +64,9 @@ app.post('/clear', function(req, res) {
                 });
             }
         });
+        var html = fs.readFileSync("./index.html", "UTF-8");
+        res.write(html.replace('{{downloadLink}}', ''));
+        res.end();
     });
 });
 
