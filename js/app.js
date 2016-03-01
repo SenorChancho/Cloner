@@ -18,7 +18,7 @@ const end_timeout = 5000;
 const articleCount = 3;
 const previewCount = 75;
 var badWords = ["the", "of", "a", "an", "on", "to", "this", "that", "skin", "hair", "muscle", "muscles", "nail", "nails", "fitness", "weight", "beauty"];
-
+var port = process.env.PORT || 3000;
 
 
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -198,7 +198,9 @@ app.post('/', function(req, res) {
     res.write(html);
 });
 
-app.listen(3000);
+app.listen(port, function() {
+
+});
 
 function createPreview(entry) {
     var words = entry.split(' ');
