@@ -4,6 +4,7 @@
 var fs = require('fs');
 var path = require('path');
 var gm = require('gm');
+var imageMagick = gm.subClass({imageMagick: true});
 
 const end_timeout = 5000;
 
@@ -55,7 +56,7 @@ var deleteFolderRecursive = function(path) {
 };
 
 function resizePhoto(src, dest, width, height) {
-    gm(src)
+    imageMagick(src)
         .resize(width, height, '^')
         .gravity('Center')
         .crop(width, height)

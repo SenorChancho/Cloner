@@ -6,6 +6,7 @@ var multer = require('multer');
 var app = express();
 var ncp = require('ncp');
 var gm = require('gm');
+var imageMagick = gm.subClass({imageMagick: true});
 var chokidar = require('chokidar');
 
 var helper = require('./helper.js');
@@ -290,7 +291,7 @@ function reSizePhoto(template, src, dest) {
         default:
             break;
     }
-    gm(src)
+    imageMagick(src)
         .resize(width, height, '^')
         .gravity('Center')
         .crop(width, height)
@@ -299,7 +300,7 @@ function reSizePhoto(template, src, dest) {
             if (err) console.log(err);
             else {
                 // Make OG copy
-                gm(src)
+                imageMagick(src)
                     .resize(1200, 1200, '^')
                     .autoOrient()
                     .write(dest, function (err) {
