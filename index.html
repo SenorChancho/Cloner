@@ -220,7 +220,10 @@
                 console.log('process sucess');
             },
 
-            error: function(jqXHR, textStatus, errorThrown) { alert(errorThrown) }
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+                console.log(textStatus);
+            }
         });
     });
 
