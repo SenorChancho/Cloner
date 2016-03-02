@@ -24,7 +24,7 @@ function findWithAttr(array, attr, value) {
     }
 }
 
-function zipFile(path, res, zipPath, linkHtml) {
+function zipFile(path, res, zipPath) {
     var fstream = require('fstream'),
         tar = require('tar'),
         zlib = require('zlib');
@@ -33,9 +33,6 @@ function zipFile(path, res, zipPath, linkHtml) {
         .pipe(tar.Pack()) /* Convert the directory to a .tar file */
         .pipe(zlib.Gzip()) /* Compress the .tar file */
         .pipe(fstream.Writer({ 'path': zipPath})); /* Give the output file name */
-
-    res.write(linkHtml);
-    res.end();
 
     setTimeout(deleteFolderRecursive, end_timeout, path);
 }
@@ -65,7 +62,23 @@ function resizePhoto(src, dest, width, height) {
         });
 }
 
+function getZipLinks(zipPath, callback) {
+    var safeName = "";
+    var downloadLinks = "";
+
+    fs.readdir(zipPath, function (err, files) {
+        files.forEach(function (file) {
+            if (file.indexOf('.tar.gz') > 0) {
+                safeName = file.replaceAll('.tar.gz', '');
+                downloadLinks += "<li><a href=\'" + file + "\'>" + safeName + "</a></li>";
+            }
+        });
+        callback(downloadLinks);
+    });
+}
+
 exports.replaceNewLines = replaceNewLines;
 exports.findWithAttr = findWithAttr;
 exports.zipFile = zipFile;
 exports.resizePhoto = resizePhoto;
+exports.getZipLinks = getZipLinks;

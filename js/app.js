@@ -33,22 +33,25 @@ app.use(multer({ dest: './uploads/'}).any());
 app.get('/', function(req, res) {
     var html = fs.readFileSync("./index.html", "UTF-8");
 
-    var safeName = "";
-    var relZipPath = "";
-    var fileName = "";
-    var downloadLinks = "";
+    //var safeName = "";
+    //var downloadLinks = "";
 
-    fs.readdir('./public/', function (err, files) {
-        files.forEach(function (file) {
-            if (file.indexOf('.tar.gz') > 0) {
-                safeName = file.replaceAll('.tar.gz', '');
-                downloadLinks += "<li><a href=\'" + file + "\'>" + safeName + "</a></li>";
-            }
-        });
-
+    helper.getZipLinks('./public/', function (downloadLinks) {
         res.write(html.replace('{{downloadLink}}', downloadLinks));
         res.end();
     });
+
+    //fs.readdir('./public/', function (err, files) {
+    //    files.forEach(function (file) {
+    //        if (file.indexOf('.tar.gz') > 0) {
+    //            safeName = file.replaceAll('.tar.gz', '');
+    //            downloadLinks += "<li><a href=\'" + file + "\'>" + safeName + "</a></li>";
+    //        }
+    //    });
+    //
+    //    res.write(html.replace('{{downloadLink}}', downloadLinks));
+    //    res.end();
+    //});
 
 
 });
@@ -186,22 +189,17 @@ app.post('/', function(req, res) {
     var relZipPath = "./public/" + safeName + ".tar.gz";
     var fileName = safeName + ".tar.gz";
     var downloadLink = "<li><a href=\'" + fileName + "\'>" + safeName + "</a></li>";
-
-    fs.readdir('./public/', function (err, files) {
-       files.forEach(function (file) {
-        if (file.indexOf('.tar.gz') > 0) {
-            safeName = file.replaceAll('.tar.gz', '');
-            downloadLink += "<li><a href=\'" + file + "\'>" + safeName + "</a></li>";
-        }
-       })
-    });
-
-    setTimeout(helper.zipFile, end_timeout, safeSitePath, res, relZipPath, downloadLink);
-
     var html = fs.readFileSync("./index.html", "UTF-8");
 
-    html = html.replace('{{downloadLink}}', "");
-    res.write(html);
+    helper.getZipLinks('./public/', function (downloadLinks) {
+        downloadLink += downloadLinks;
+        res.write(html.replace('{{downloadLink}}', downloadLink));
+        res.end();
+    });
+
+    setTimeout(helper.zipFile, end_timeout, safeSitePath, res, relZipPath);
+
+
 });
 
 app.listen(port, function() {
