@@ -300,6 +300,9 @@ function reSizePhoto(template, src, dest) {
             width = 250;
             height = 250;
             break;
+        case "Instant Bulk":
+            width = 225;
+            height = 150;
         default:
             break;
     }
