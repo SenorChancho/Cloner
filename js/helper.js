@@ -53,7 +53,7 @@ var deleteFolderRecursive = function(path) {
 };
 
 function resizePhoto(src, dest, width, height) {
-    imageMagick(src)
+    gm(src)
         .resize(width, height, '^')
         .gravity('Center')
         .crop(width, height)
