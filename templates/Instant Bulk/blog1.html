@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta property="og:title" content="Instant Bulk" />
+    <meta property="og:title" content="{{title}}" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://InstantBulk.com/blog1.html" />
-    <meta property="og:image" content="http://InstantBulk.com/images/tv.jpg" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/blog1.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/ogblog1.jpg" />
 
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -13,7 +13,7 @@
     <meta name="title" content="" />
     <meta name="description" content="" />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Instant Bulk - Blog</title>
+    <title>{{title}} - Blog</title>
     <!-- ////////////////////////////////// -->
     <!-- //      Start Stylesheets       // -->
     <!-- ////////////////////////////////// -->
@@ -96,34 +96,10 @@
                         <h1 class="title">Blog</h1>
                         <div class="post">
                             <div class="entry">
-                                <h2><a href="#">Get Strong While Watching TV</a></h2>
-                                <small><span class="author_name">by Andrew</span> </small>
-                                <p><img src="images/tv.jpg" alt="" /></p>
-                                <p>This week, Australian scientists reported that viewing an hour of TV after the age of 25 can abbreviate the viewer's life by around 22 minutes. What's more, for as long as decade, numerous studies have been finding direct connections between's hours of TV survey and heftiness. However, I need to admit that in spite of these studies, I stare at the TV consistently (and I'm especially partial to any cooking appears or unscripted television demonstrates that include ability rivalries). So in this article, you'll learn 3 exercise schedules that you can do while staring at the TV! <br>
-                                    <br>
-                                    <strong>Why Should I Exercise While Watching TV?</strong> <br>
-                                    <br>
-                                    In the scene 7 Ways To Burn Calories By Standing More, we took in the hazards of sitting &ndash; basically a drop in digestion system, weight on the low back, and an abatement in the movement of fat blazing compounds. It's no big surprise that individuals who sit and watch a great deal of TV have weight issues! <br>
-                                    <br>
-                                    While there are surely times in life when you just need the unwinding sentiment twisting up on the lounge chair with a dish of popcorn and your most loved film, there are different times when there's a TV appear, motion picture, or donning occasion that you truly need to watch &ndash; notwithstanding your need to press in an activity session. Why not have the best of both universes? <br>
-                                    <br>
-                                    Here are 3 workout schedules to get you fit while sitting in front of the TV: <br>
-                                    <br>
-                                    #1 TV Show Exercise Session <br>
-                                    <br>
-                                    Most TV appears, particularly average sitcoms or dramatizations, have anywhere in the range of 3 to 5 essential characters. Start by picking an activity for each of those significant characters. When you pick an activity, recall to pick exercises which you can do while confronting the TV, since your TV workout will get to be irritating in case you're winding, turning and missing the activity onscreen. <br>
-                                    <br>
-                                    We should pick a stomach workout for this illustration. So Character 1 would speak to a board, Character 2 a side board, Character 3 a scaffold, Character 4 a bike crunch, and Character 5 a versatile band turn. Every time a character shows up, you perform 10-15 reiterations of that work out. It's similar to a drinking amusement, however without the headache! <br>
-                                    <br>
-                                    You could without much of a stretch do this with a leg workout too. For instance, use squats, reverse lurches, side thrusts, forward jumps, and calf raises, and like the abdominal muscle standard, each time a character connected with an activity shows up, you perform that work out. Amid the plugs, you can perform cardio interims, for example, hopping jacks, step-ups, running set up, or an activity that doesn't oblige you to confront the TV, similar to squat-push bounced. At last, utilize the opening and shutting credits for extending. <br>
-                                    <br>
-                                    Obviously, you could likewise just do a cardio session amid the TV appear. For a sample, see my Glee Indoor Cycling Workout. <br>
-                                    <br>
-                                    #2 Sporting Event Exercise Session <br>
-                                    <br>
-                                    Wearing occasions, which more often than exclude changes of ownership, are entirely helpful for cardiovascular activity. For instance, suppose that Team An is contending with Team B. Set-up a treadmill, bike mentor, or curved before the TV and get good to go. <br>
-                                    <br>
-                                    At whatever time Team A has the ball, the puck, or some other sort of ownership, you do an extraordinary interim, for example, accelerating speedier, expanding the treadmill speed, or expanding the curved steps every moment. At whatever point Team B has ownership, you diminishing to a simple, vigorous, recuperation pace. At the point when the plugs show up, you can do a rhythm exertion, which is a moderate pace at a medium power. Then again, you could do interims amid the advertisements, so that each time a business break starts, you build the resistance or slant for the first business, diminish for the second business, increment for the third time.</p>
+                                <h2><a href="#">{{article1_title}}</a></h2>
+                                <small><span class="author_name">by {{writer}}</span> </small>
+                                <p><img src="images/blog1.jpg" alt="" /></p>
+                                <p>{{article1}}</p>
                                 <p> <a href="blog.html" class="more">Back</a></p>
                             </div>
                             <div class="date">
@@ -144,7 +120,7 @@
                             <div id="subscribe2">
                                 <br>
                                 <div>
-                                    <h2><strong>Subscribe to our blog!</strong></h2>
+                                    <h2><strong>{{action}}</strong></h2>
                                     <input class="input" type="text" value="Enter your email here" onblur="if(this.value=='') this.value='Enter your email here'" onFocus="if(this.value =='Enter your email here' ) this.value=''" >
                                     <br>
                                     <a href="index.html" onClick="return alert('Thank you for subscribing!')">Subscribe</a>
@@ -163,7 +139,7 @@
 <!-- BEGIN FOOTER -->
 <div id="footer_container">
     <div class="centercolumn">
-        <div id="foot">Copyright &copy;2010 <a href="#">Instant Bulk</a>. All rights reserved. </div>
+        <div id="foot">Copyright &copy;2010 <a href="#">{{title}}</a>. All rights reserved. </div>
         <!-- end foot -->
     </div><!-- end centercolumn -->
 </div><!-- end bottom container -->

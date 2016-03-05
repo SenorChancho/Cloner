@@ -13,6 +13,7 @@ var helper = require('./helper.js');
 var challengerFitBlog = require('./challengerFitBlog.js');
 var pureHairSalon = require('./pureHairSalon.js');
 var lifeAndBeauty = require('./lifeAndBeauty.js');
+var instantBulk = require('./instantBulk.js');
 
 const end_timeout = 5000;
 
@@ -122,6 +123,7 @@ app.post('/', function(req, res) {
                 htmlText = htmlText.replaceAll('{{who_we_are}}', req.body.who_we_are);
                 htmlText = htmlText.replaceAll('{{what_we_do}}', req.body.what_we_do);
                 htmlText = htmlText.replaceAll('{{stay_in_touch}}', req.body.stay_in_touch);
+                htmlText = htmlText.replaceAll('{{welcome}}', req.body.welcome);
 
                 // Replace file names
                 htmlText = htmlText.replaceAll('blog1', getFileName(req, "blog1.html"));
@@ -180,6 +182,9 @@ app.post('/', function(req, res) {
             break;
         case "Life and Beauty":
             lifeAndBeauty.getUniqueFiles(req, safeSitePath);
+            break;
+        case "Instant Bulk":
+            instantBulk.getUniqueFiles(req, safeSitePath);
             break;
         default:
             break;

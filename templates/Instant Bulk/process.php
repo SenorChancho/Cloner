@@ -1,6 +1,6 @@
 <?php 
 	$emailTo = 'testmail@templatesquare.com';
-	$subject = 'Instant Bulk Contact Form';
+	$subject = '{{title}} Contact Form';
 	$name=$_REQUEST['name'];
 	$email=$_REQUEST['email'];
 	$msg=$_REQUEST['msg'];

@@ -16,6 +16,7 @@
         <option value="Strong Evo">Strong Evo</option>
         <option value="Challenger Fit Blog">Challenger Fit Blog</option>
         <option value="Pure Hair Salon">Pure Hair Salon</option>
+        <option value="Instant Bulk">Instant Bulk</option>
     </select>
 
     <label for="safe_site_name">Safe Site Name</label>
@@ -42,6 +43,25 @@
     <label for="blog_photo">Blog Photo</label>
     <input class="drop" type="file" name="blog_photo" id="blog_photo" required>
 
+    <label for="slide1">Slide Photo</label>
+    <input class="drop" type="file" name="slide1" id="slide1" required>
+
+    <label for="caption1">Caption</label>
+    <input type="text" name="caption1" id="caption1" required>
+
+    <label for="slide2">Slide Photo</label>
+    <input class="drop" type="file" name="slide2" id="slide2" required>
+
+    <label for="caption2">Caption</label>
+    <input type="text" name="caption2" id="caption2" required>
+
+    <label for="slide3">Slide Photo</label>
+    <input class="drop" type="file" name="slide3" id="slide3" required>
+
+    <label for="caption3">Caption</label>
+    <input type="text" name="caption3" id="caption3" required>
+
+
     <label for="quote">Quote</label>
     <input type="text" name="quote" id="quote" required>
 
@@ -53,6 +73,9 @@
 
     <label for="stay_in_touch">Stay in touch</label>
     <input type="text" name="stay_in_touch" id="stay_in_touch" required>
+
+    <label for="welcome">Welcome</label>
+    <input type="text" name="welcome" id="welcome" required>
 
     <fieldset>
         <label for="article1_title">First Article Title</label>
@@ -90,14 +113,14 @@
     <label for="action_phrase">Action Phrase</label>
     <input type="text" name="action_phrase" id="action_phrase" required>
 
-    <button id="createClone" type="submit">Create Clone</button>
+    <button id="createClone" type="submit">CREATE</button>
 </form>
 
 <h3>Downloads</h3>
-<button id="clear">CLEAR</button>
 <ul id="downloads">
     {{downloadLink}}
 </ul>
+<button id="clear">CLEAR</button>
 <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
@@ -123,6 +146,24 @@
         var $stayInTouch = $('#stay_in_touch');
         var $stayInTouchLabel = $('label[for=stay_in_touch], input#stay_in_touch');
 
+        var $slide1 = $('#slide1');
+        var $slide1Label = $('label[for=slide1], input#slide1');
+        var $caption1 = $('#caption1');
+        var $caption1Label = $('label[for=caption1], input#caption1');
+        var $slide2 = $('#slide2');
+        var $slide2Label = $('label[for=slide2], input#slide2');
+        var $caption2 = $('#caption2');
+        var $caption2Label = $('label[for=caption2], input#caption2');
+        var $slide3 = $('#slide3');
+        var $slide3Label = $('label[for=slide3], input#slide3');
+        var $caption3 = $('#caption3');
+        var $caption3Label = $('label[for=caption3], input#caption3');
+
+        var $welcome = $('#welcome');
+        var $welcomeLabel = $('label[for=welcome], input#welcome');
+
+
+
         $contact.hide().prop('required', false);
         $contactLabel.hide();
 
@@ -147,6 +188,22 @@
         $stayInTouch.hide().prop('required', false);
         $stayInTouchLabel.hide();
 
+        $slide1.hide().prop('required', false);
+        $slide1Label.hide();
+        $slide2.hide().prop('required', false);
+        $slide2Label.hide();
+        $slide3.hide().prop('required', false);
+        $slide3Label.hide();
+
+        $caption1.hide().prop('required', false);
+        $caption1Label.hide();
+        $caption2.hide().prop('required', false);
+        $caption2Label.hide();
+        $caption3.hide().prop('required', false);
+        $caption3Label.hide();
+
+        $welcome.hide().prop('required', false);
+        $welcomeLabel.hide();
 
         switch (selectedValue) {
             case "Strong Evo":
@@ -189,6 +246,33 @@
 
                 $stayInTouch.show().prop('required', true);
                 $stayInTouchLabel.show();
+                break;
+
+            case "Instant Bulk":
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
+
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $slide1.show().prop('required', true);
+                $slide1Label.show();
+                $slide2.show().prop('required', true);
+                $slide2Label.show();
+                $slide3.show().prop('required', true);
+                $slide3Label.show();
+
+                $caption1.show().prop('required', true);
+                $caption1Label.show();
+                $caption2.show().prop('required', true);
+                $caption2Label.show();
+                $caption3.show().prop('required', true);
+                $caption3Label.show();
+
+                $welcome.show().prop('required', true);
+                $welcomeLabel.show();
+                break;
+            default:
                 break;
         }
 

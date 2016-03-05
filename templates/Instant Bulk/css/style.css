@@ -1,6 +1,6 @@
 /* 
 
-Instant Bulk - CSS File
+{{title}} - CSS File
 
 */
 
@@ -129,7 +129,7 @@ background-color: black;
 	background-color: black;
 	width: 100%;
 	border-bottom: solid 10px;
-	border-bottom-color: #00ff04;
+	border-bottom-color: rgb(247, 213, 21);
 }
 /*** END TOP ***/
 
@@ -177,7 +177,7 @@ ul#menu li a {
 
 ul#menu li a:hover {
 	/*background-image:url(../images/menu_hover.gif); background-repeat:repeat-y; background-position:right*/
-	background-color: #0038f9;
+	background-color: rgb(247, 149, 14);
 }
 ul#menu li a.active {background-image:url(../images/menu_hover.gif); background-repeat:repeat-y; background-position:right}
 ul#menu li ul li{font-size:12px; border-top:solid 1px white;}
@@ -194,9 +194,9 @@ ul#menu li ul li a:hover {}
 
 
 /*** FOOTER ***/
-#footer_container a, #footer_container a:visited{color:#00ff04; text-decoration:none;}
+#footer_container a, #footer_container a:visited{color:rgb(247, 213, 21); text-decoration:none;}
 #footer_container a:hover{color:#fff; text-decoration:underline;}
-#foot{text-align:center; padding:8px 0px 0px 0px; color:#00ff04; font-size:11px;
+#foot{text-align:center; padding:8px 0px 0px 0px; color:rgb(247, 213, 21); font-size:11px;
 background-color: black;
 	border-bottom: solid black 15px;
 }

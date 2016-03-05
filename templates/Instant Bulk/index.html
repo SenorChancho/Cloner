@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta property="og:title" content="Instant Bulk" />
+	<meta property="og:title" content="{{title}}" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://InstantBulk.com/index.html" />
-	<meta property="og:image" content="http://InstantBulk.com/images/logo.png" />
+	<meta property="og:url" content="http://{{title_no_spaces}}.com/index.html" />
+	<meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
 
 <meta http-equiv="Content-Script-Type" content="text/javascript" /> 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -13,7 +13,7 @@
 <meta name="title" content="" />
 <meta name="description" content="" />
 	<meta name="robots" content="noindex,nofollow" />
-<title>Instant Bulk</title>
+<title>{{title}}</title>
 <!-- ////////////////////////////////// -->
 <!-- //      Start Stylesheets       // -->
 <!-- ////////////////////////////////// -->
@@ -43,13 +43,7 @@ $(document).ready(function() {
 	 Cufon.replace('h1') ('h2') ('h3') ('h4') ('h5') ('h6') ('#menu li a')
 	 }
 </script>
-<!--[if lte IE 7]>
-<link href="css/ie.css" rel="stylesheet" type="text/css" />
-<script src="js/DD_belatedPNG.js"></script>
-<script>
-  DD_belatedPNG.fix('img, #top');
-</script>
-<![endif]--> 
+
 <script type="text/javascript" src="js/menu-collapsed.js" ></script>
 </head>
 
@@ -108,15 +102,15 @@ $(document).ready(function() {
 								<ul id="s3sliderContent">
 									<li class="s3sliderImage">
 										<img src="images/slide1.jpg" alt="" width="620" height="300"/>
-										<span>Bulk up instantly!</span>
+										<span>{{slide1_caption}}</span>
 									</li>
 									<li class="s3sliderImage">
 										<img src="images/slide2.jpg" alt="" width="620" height="300"/>
-										<span>Train with us and see results fast.</span>
+										<span>{{slide2_caption}}</span>
 									</li>
 									<li class="s3sliderImage">
 										<img src="images/slide3.jpg" alt="" width="620" height="300"/>
-										<span>Get expert advice from our staff.</span>
+										<span>{{slide3_caption}}</span>
 									</li>
 									<li class="clear s3sliderImage"></li>
 								</ul>
@@ -124,7 +118,7 @@ $(document).ready(function() {
 						</div><!-- end slide -->
 						<div id="maintext">
 						<h1>Welcome</h1>
-						<p>We are Instant Bulk. We have a passion in training and training efficiently. Its not easy to add bulk fast, but that's why we research the best methods to help you put on muscle mass fast.</p>
+						<p>{{welcome}}</p>
 
 						</div><!-- end maintext -->
 					</div><!-- end maincontent -->
@@ -138,7 +132,7 @@ $(document).ready(function() {
 	<!-- BEGIN FOOTER -->
 	<div id="footer_container">
 		<div class="centercolumn">
-			<div id="foot">Copyright &copy;2010 <a href="#">Instant Bulk</a>. All rights reserved. </div>
+			<div id="foot">Copyright &copy;2010 <a href="#">{{title}}</a>. All rights reserved. </div>
 			<!-- end foot -->
 		</div><!-- end centercolumn -->
 	</div><!-- end bottom container -->
