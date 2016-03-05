@@ -124,6 +124,10 @@ app.post('/', function(req, res) {
                 htmlText = htmlText.replaceAll('{{what_we_do}}', req.body.what_we_do);
                 htmlText = htmlText.replaceAll('{{stay_in_touch}}', req.body.stay_in_touch);
                 htmlText = htmlText.replaceAll('{{welcome}}', req.body.welcome);
+                htmlText = htmlText.replaceAll('{{slide1_caption}}', req.body.caption1);
+                htmlText = htmlText.replaceAll('{{slide2_caption}}', req.body.caption2);
+                htmlText = htmlText.replaceAll('{{slide3_caption}}', req.body.caption3);
+
 
                 // Replace file names
                 htmlText = htmlText.replaceAll('blog1', getFileName(req, "blog1.html"));
