@@ -17,6 +17,7 @@
         <option value="Challenger Fit Blog">Challenger Fit Blog</option>
         <option value="Pure Hair Salon">Pure Hair Salon</option>
         <option value="Instant Bulk">Instant Bulk</option>
+        <option value="Terra Hair Design">Terra Hair Design</option>
     </select>
 
     <label for="safe_site_name">Safe Site Name</label>
@@ -230,6 +231,19 @@
 
                 $quote.show().prop('required', true);
                 $quoteLabel.show();
+                break;
+            case "Terra Hair Design":
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $contactPhoto.show().prop('required', true);
+                $contactPhotoLabel.show();
+
+                $blogPhoto.show().prop('required', true);
+                $blogPhotoLabel.show();
+
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
                 break;
             case "Life and Beauty":
                 $aboutPhoto.show().prop('required', true);

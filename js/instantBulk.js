@@ -29,7 +29,7 @@ function getUniqueFiles(req, safeSitePath) {
             fs.rename(req.files[photoIndex].path, endPath, function (err) {
                 if (err) throw err;
 
-                helper.resizePhoto(endPath, endPath, 240, 214);
+                helper.resizePhoto(endPath, endPath, 620, 300);
                 // Delete the temp file
                 fs.unlink(req.files[photoIndex].path, function () {
                     if (err) throw err;

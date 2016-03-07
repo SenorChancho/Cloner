@@ -1,0 +1,238 @@
+
+html, body, div, p, ul, li, ol, h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+} 
+
+.clearing {
+	clear: both;
+}
+
+.right {
+    float: right;
+    margin: 0px 0 20px 20px;
+}
+
+.serviceRight {
+	position: relative;
+	top: 20px;
+	float: right;
+}
+
+.imagebox {
+	width: 200px;
+	height: 223px;
+	background: #8F9E8B;
+}
+
+.serviceBox {
+	width: 290px;
+	height: 223px;
+	background: #8F9E8B;
+}
+
+.imagebox div {
+	padding: 11px;
+}
+
+h2 {
+	height: 41px;
+	width: 300px;
+	background-repeat: no-repeat;
+}
+
+h2 span {
+	display: none;
+}
+
+body {
+	color: #292929;
+	background-color: #292929;
+	font: 13px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+#wrapper {
+	width: 871px;
+	margin: 50px auto;
+}
+
+#header {
+	position: relative;
+	float: left;
+}
+
+#header h1 {
+	width: 405px;
+	height: 41px;
+
+}
+
+#header h1 span {
+	display: none;
+}
+
+#navigation {
+	float: right;
+}
+
+#navigation ul {
+	list-style: none;
+	margin: 20px 20px 0 0;
+}
+
+#navigation ul li {
+	float: left;
+	margin: 0 3px;
+}
+
+#navigation ul li a {
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding: 7px 15px;
+	font-size: 14px;
+}
+
+#navigation ul li a:hover {
+	background: #8F9E8B;
+	color: #292929;
+}
+
+#navigation ul li.current, #navigation ul li.current a:hover {
+	background: #5B7876;
+	color: #F2E6B6;
+}
+
+#main {
+	background: #5B7876;
+	clear: both;
+}
+
+#maininside {
+    padding:30px;
+}
+
+#footer {
+	margin: 10px 0 0;
+	font-size: 11px;
+	line-height: 20px;
+}
+
+#footerinside {
+	color: #F2E6B6;
+	text-align: center;
+}
+
+#homepagetop1, #homepagetop2, #homepagetop3{
+	float: left;
+}
+
+#homepagetop2 {
+	margin: 0 35px;
+}
+
+#homepagecontent {
+	clear: left;
+	padding:20px 0 0 0;
+	width: 530px;
+	float: left;
+}
+
+#homepagequote {
+	float: right;
+	margin: 20px 0 0 0;
+}
+
+#homepagequote {
+	width: 247px;
+	height: 270px;
+	background: #8F9E8B url(../images/quote.gif) no-repeat 50% 50%;
+}
+
+#headerinside img {
+	position: absolute;
+	height: 90px;
+	width: auto;
+	left: 0;
+	top: -45px;
+	z-index: -1;
+}
+
+#staffPage h2 {
+	font-size: 30px;
+}
+
+.homePage a {
+	font-size: 24px;
+	color: #F2E6B6;
+	text-decoration: none;
+}
+
+.entry {
+	margin-bottom: 20px;
+}
+
+.entry a {
+	display: block;
+	width: 55px;
+	text-decoration: none;
+	font-weight: bold;
+	margin-top: 20px;
+	color: black;
+	padding: 7px;
+	background-color: #8f9e8b;
+
+}
+
+.entry p, .entry h3 {
+	margin: 5px;
+}
+
+#back {
+	width: 33px;
+}
+
+#contactForm label {
+	display: inline-block;
+	width: 80px;
+}
+
+#contactForm input {
+	margin: 5px;
+}
+
+#contactForm textarea {
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+#subscribe {
+	padding-top: 10px;
+	padding-left: 20px;
+	display: block;
+	width: 220px;
+	background: repeating-linear-gradient(
+			45deg,
+			#606dbc,
+			#606dbc 10px,
+			#465298 10px,
+			#465298 20px
+	);
+}
+
+#subscribe a, #subscribe p, #subscribe span {
+	text-decoration: none;
+	color: white;
+}
+
+#subscribe p {
+	color: white;
+	font-weight: bolder;
+}
+#subscribe a {
+	color: darkred;
+	font-weight: bolder;
+}
+
+
+

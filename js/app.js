@@ -14,6 +14,7 @@ var challengerFitBlog = require('./challengerFitBlog.js');
 var pureHairSalon = require('./pureHairSalon.js');
 var lifeAndBeauty = require('./lifeAndBeauty.js');
 var instantBulk = require('./instantBulk.js');
+var terraHairDesign = require('./terraHairDesign.js');
 
 const end_timeout = 5000;
 
@@ -190,6 +191,9 @@ app.post('/', function(req, res) {
         case "Instant Bulk":
             instantBulk.getUniqueFiles(req, safeSitePath);
             break;
+        case "Terra Hair Design":
+            terraHairDesign.getUniqueFiles(req, safeSitePath);
+            break;
         default:
             break;
     }
@@ -303,6 +307,11 @@ function reSizePhoto(template, src, dest) {
         case "Instant Bulk":
             width = 225;
             height = 150;
+            break;
+        case "Terra Hair Design":
+            width = 175;
+            height = 200;
+            break;
         default:
             break;
     }
