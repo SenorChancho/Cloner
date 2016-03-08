@@ -20,7 +20,7 @@ const end_timeout = 5000;
 
 const articleCount = 3;
 const previewCount = 75;
-var badWords = ["the", "of", "a", "an", "on", "to", "this", "that", "skin", "hair", "muscle", "muscles", "nail", "nails", "fitness", "weight", "beauty"];
+var badWords = ["the", "of", "a", "an", "on", "to", "this", "that", "skin", "hair", "muscle", "muscles", "nail", "nails", "fitness", "weight", "beauty", "fat"];
 var port = process.env.PORT || 3000;
 
 
@@ -35,27 +35,10 @@ app.use(multer({ dest: './uploads/'}).any());
 app.get('/', function(req, res) {
     var html = fs.readFileSync("./index.html", "UTF-8");
 
-    //var safeName = "";
-    //var downloadLinks = "";
-
     helper.getZipLinks('./public/', function (downloadLinks) {
         res.write(html.replace('{{downloadLink}}', downloadLinks));
         res.end();
     });
-
-    //fs.readdir('./public/', function (err, files) {
-    //    files.forEach(function (file) {
-    //        if (file.indexOf('.tar.gz') > 0) {
-    //            safeName = file.replaceAll('.tar.gz', '');
-    //            downloadLinks += "<li><a href=\'" + file + "\'>" + safeName + "</a></li>";
-    //        }
-    //    });
-    //
-    //    res.write(html.replace('{{downloadLink}}', downloadLinks));
-    //    res.end();
-    //});
-
-
 });
 
 app.post('/clear', function(req, res) {
@@ -270,16 +253,6 @@ function getFileName(req, oldName) {
     }
 
     return oldName.replace('.html', '');
-}
-
-function resizePhoto(src, dest, width, height) {
-    gm(src)
-        .resize(width, height, '^')
-        .gravity('Center')
-        .crop(width, height)
-        .write(dest, function (err) {
-            if (err) console.log(err);
-            });
 }
 
 function reSizePhoto(template, src, dest) {
