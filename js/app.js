@@ -15,6 +15,7 @@ var pureHairSalon = require('./pureHairSalon.js');
 var lifeAndBeauty = require('./lifeAndBeauty.js');
 var instantBulk = require('./instantBulk.js');
 var terraHairDesign = require('./terraHairDesign.js');
+var beautyLifeEssentials = require('./beautyLifeEssentials');
 
 const end_timeout = 5000;
 
@@ -138,26 +139,28 @@ app.post('/', function(req, res) {
         });
     });
 
-    // Article photos
-    for (var index = 1; index <= articleCount; index++) {
-        var endPath = path.join(safeSitePath, 'images', getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
-        var endPathog = path.join(safeSitePath, 'images', "og" + getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
+    if (req.body.templateType.toString() !== "Beauty Life Essentials") {
+        // Article photos
+        for (var index = 1; index <= articleCount; index++) {
+            var endPath = path.join(safeSitePath, 'images', getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
+            var endPathog = path.join(safeSitePath, 'images', "og" + getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
 
-        var fieldName = "article" + index.toString() + "_photo";
-        var fieldNameIndex = helper.findWithAttr(req.files, "fieldname", fieldName);
-        (function(endPath, endPathog, i) {
+            var fieldName = "article" + index.toString() + "_photo";
+            var fieldNameIndex = helper.findWithAttr(req.files, "fieldname", fieldName);
+            (function (endPath, endPathog, i) {
 
-            console.log(req.files);
-            fs.rename(req.files[i].path, endPath, function (err) {
-                if (err) throw err;
-
-                reSizePhoto(req.body.templateType, endPath, endPathog);
-                // Delete the temp file
-                fs.unlink(req.files[i].path, function () {
+                console.log(req.files);
+                fs.rename(req.files[i].path, endPath, function (err) {
                     if (err) throw err;
+
+                    reSizePhoto(req.body.templateType, endPath, endPathog);
+                    // Delete the temp file
+                    fs.unlink(req.files[i].path, function () {
+                        if (err) throw err;
+                    });
                 });
-            });
-        })(endPath, endPathog, fieldNameIndex);
+            })(endPath, endPathog, fieldNameIndex);
+        }
     }
 
     // Template specific files
@@ -177,6 +180,8 @@ app.post('/', function(req, res) {
         case "Terra Hair Design":
             terraHairDesign.getUniqueFiles(req, safeSitePath);
             break;
+        case "Beauty Life Essentials":
+            beautyLifeEssentials.getUniqueFiles(req, safeSitePath);
         default:
             break;
     }
@@ -248,6 +253,7 @@ function getFileName(req, oldName) {
         newFileName = fileWords.join(' ');
         newFileName = newFileName.replace(/[^\w\s]/gi, '');
         newFileName = newFileName.toCamelCase();
+        newFileName = newFileName.trim();
 
         return newFileName;
     }

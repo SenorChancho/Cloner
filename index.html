@@ -18,6 +18,7 @@
         <option value="Pure Hair Salon">Pure Hair Salon</option>
         <option value="Instant Bulk">Instant Bulk</option>
         <option value="Terra Hair Design">Terra Hair Design</option>
+        <option value="Beauty Life Essentials">Beauty Life Essentials</option>
     </select>
 
     <label for="safe_site_name">Safe Site Name</label>
@@ -285,6 +286,13 @@
 
                 $welcome.show().prop('required', true);
                 $welcomeLabel.show();
+                break;
+            case "Beauty Life Essentials":
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
+
+                $contact.show().prop('required', true);
+                $contactLabel.show();
                 break;
             default:
                 break;
