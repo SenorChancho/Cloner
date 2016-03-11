@@ -67,7 +67,7 @@ app.post('/', function(req, res) {
 
     fs.readdir(templatePath, function(err, files) {
         files.forEach(function(item) {
-            if (item.indexOf('.html') > -1) {
+            if (item.indexOf('.html') > -1 || item.indexOf('.css') > -1) {
                 var htmlText = fs.readFileSync(path.join(templatePath, item), "UTF-8");
 
                 // Title and OG Data
