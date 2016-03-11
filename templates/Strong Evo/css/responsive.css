@@ -79,7 +79,7 @@
   /*.blog-style-one .comments-area .comments > ul li .thumb {*/
     /*margin-bottom: 10px;*/
   /*}*/
-  /*.blog-style-one .comments-area .comments > ul li .thumb img {*/
+  /*.blog-style-one .comments-area .comments > ul li .thumb images {*/
     /*margin-right: 10px;*/
   /*}*/
   /*.blog-style-one .comments-area .comments > ul li p {*/
@@ -95,7 +95,7 @@
   /*.footer {*/
     /*text-align: center;*/
   /*}*/
-  /*.footer .widget-the-reader .logo img {*/
+  /*.footer .widget-the-reader .logo images {*/
     /*float: none;*/
     /*margin: 0;*/
   /*}*/
@@ -175,7 +175,7 @@
   /*.blog-style-one .blog-item p {*/
     /*font-size: 16px;*/
   /*}*/
-  /*.blog-style-one .blog-item img.content {*/
+  /*.blog-style-one .blog-item images.content {*/
     /*margin-bottom: 20px;*/
     /*margin-top: 20px;*/
   /*}*/
@@ -217,7 +217,7 @@
     /*width: 50px;*/
     /*padding-top: 30px;*/
   /*}*/
-  /*.header .navbar .navbar-brand img {*/
+  /*.header .navbar .navbar-brand images {*/
     /*width: 45px;*/
   /*}*/
   /*.header .navbar .navbar-brand h1 {*/

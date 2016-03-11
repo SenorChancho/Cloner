@@ -111,7 +111,7 @@
                         }else if (obj.data('type') == 'youtube'){
                           loadYoutube();
                         } else {
-                          content.html('<img src="'+dest+'">');
+                          content.html('<images src="'+dest+'">');
                           preloadFirst();
                         }
                       });
@@ -138,7 +138,7 @@
                         }else if (obj.data('type') == 'youtube'){
                           loadYoutube();
                         } else {
-                          content.html('<img src="'+dest+'">');
+                          content.html('<images src="'+dest+'">');
                           preloadFirst();
                         }
                       });
@@ -259,7 +259,7 @@
                           } else if (theprev.data('type') == 'vimeo'){
                             loadVimeo();
                           }else{
-                            content.html('<img src="'+dest+'">');
+                            content.html('<images src="'+dest+'">');
                             preloadFirst();
                           }
                           obj = theprev;
@@ -309,7 +309,7 @@
                           } else if (thenext.data('type') == 'vimeo'){
                             loadVimeo();
                           }else{
-                            content.html('<img src="'+dest+'">');
+                            content.html('<images src="'+dest+'">');
                             preloadFirst();
                           }
                           obj = thenext;
@@ -464,7 +464,7 @@
 
     /* -------- PRELOAD IMAGE -------- */
     function preloadFirst(){
-        prima = $('.vbox-content').find('img');
+        prima = $('.vbox-content').find('images');
         prima.one('load', function() {
           updateoverlay();
         }).each(function() {

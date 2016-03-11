@@ -112,7 +112,7 @@ body .social-icon a:hover { color: #1e1e1e }
     margin: 0;
 }
 .logo h1 a {
-    background: url(img/logo.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url(images/logo.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     display: inline-block;
     padding: 5px 5px 5px 51px;
 }
@@ -168,9 +168,9 @@ ul.nav.navbar-nav li ul.dropdown-menu li a { text-transform: none; font-weight: 
     background-size: cover;
     background-position: center center;
 }
-.slide-1 { background-image: url(img/blog1.jpg) }
-.slide-2 { background-image: url(img/blog2.jpg) }
-.slide-3 { background-image: url(img/blog3.jpg) }
+.slide-1 { background-image: url(images/blog1.jpg) }
+.slide-2 { background-image: url(images/blog2.jpg) }
+.slide-3 { background-image: url(images/blog3.jpg) }
 
 .slides .owl-nav {
     left: 0;
@@ -478,7 +478,7 @@ body #tweet li a:hover { color: #1e1e1e }
     -o-transition: 0.3s;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    background: url(img/search-icon.png) no-repeat scroll 0 7px;
+    background: url(images/search-icon.png) no-repeat scroll 0 7px;
     text-indent: -9999px;
 }
 .search-form input[type="search"]:focus {
@@ -858,7 +858,7 @@ body .back-to-home a:hover {
 .post-featured-content a.post-lightbox {
     display: block;
     position: relative;
-    cursor: url(img/plus-sign.png), auto;
+    cursor: url(images/plus-sign.png), auto;
 }
 .post-featured-content a.post-lightbox::after {
     content: "";

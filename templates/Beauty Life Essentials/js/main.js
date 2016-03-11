@@ -36,7 +36,7 @@
             get: 'tagged',
             tagName: 'nature',
             accessToken: '1189321718.467ede5.59564e795f3d4cedbd2d5c5a33b03ca1',
-            template: '<a target="_blank" href="{{link}}"><img src="{{image}}" /></a>'
+            template: '<a target="_blank" href="{{link}}"><images src="{{image}}" /></a>'
         });
         userFeed.run();     
         

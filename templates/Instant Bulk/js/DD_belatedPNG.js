@@ -41,17 +41,17 @@ var DD_belatedPNG = {
 			screenStyleSheet = screenStyleSheet.styleSheet;
 			screenStyleSheet.addRule(this.ns + '\\:*', '{behavior:url(#default#VML)}');
 			screenStyleSheet.addRule(this.ns + '\\:shape', 'position:absolute;');
-			screenStyleSheet.addRule('img.' + this.ns + '_sizeFinder', 'behavior:none; border:none; position:absolute; z-index:-1; top:-10000px; visibility:hidden;'); /* large negative top value for avoiding vertical scrollbars for large images, suggested by James O'Brien, http://www.thanatopsic.org/hendrik/ */
+			screenStyleSheet.addRule('images.' + this.ns + '_sizeFinder', 'behavior:none; border:none; position:absolute; z-index:-1; top:-10000px; visibility:hidden;'); /* large negative top value for avoiding vertical scrollbars for large images, suggested by James O'Brien, http://www.thanatopsic.org/hendrik/ */
 			this.screenStyleSheet = screenStyleSheet;
 			
 			/* Add a print-media stylesheet, for preventing VML artifacts from showing up in print (including preview). */
-			/* Thanks to Rémi Prévost for automating this! */
+			/* Thanks to Rï¿½mi Prï¿½vost for automating this! */
 			printStyleSheet = document.createElement('style');
 			printStyleSheet.setAttribute('media', 'print');
 			document.documentElement.firstChild.insertBefore(printStyleSheet, document.documentElement.firstChild.firstChild);
 			printStyleSheet = printStyleSheet.styleSheet;
 			printStyleSheet.addRule(this.ns + '\\:*', '{display: none !important;}');
-			printStyleSheet.addRule('img.' + this.ns + '_sizeFinder', '{display: none !important;}');
+			printStyleSheet.addRule('images.' + this.ns + '_sizeFinder', '{display: none !important;}');
 		}
 	},
 	readPropertyChange: function () {

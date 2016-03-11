@@ -276,7 +276,7 @@ function buildOptions($cont, $slides, els, options, o) {
 		this.cycleH = (opts.fit && opts.height) ? opts.height : $el.height();
 		this.cycleW = (opts.fit && opts.width) ? opts.width : $el.width();
 
-		if ( $el.is('img') ) {
+		if ( $el.is('images') ) {
 			// sigh..  sniffing, hacking, shrugging...  this crappy hack tries to account for what browsers do when
 			// an image is being downloaded and the markup did not include sizing info (height/width attributes);
 			// there seems to be some "default" sizes used in this situation
@@ -287,7 +287,7 @@ function buildOptions($cont, $slides, els, options, o) {
 			// don't requeue for images that are still loading but have a valid size
 			if (loadingIE || loadingFF || loadingOp || loadingOther) {
 				if (o.s && opts.requeueOnImageNotLoaded && ++options.requeueAttempts < 100) { // track retry count so we don't loop forever
-					log(options.requeueAttempts,' - img slide not loaded, requeuing slideshow: ', this.src, this.cycleW, this.cycleH);
+					log(options.requeueAttempts,' - images slide not loaded, requeuing slideshow: ', this.src, this.cycleW, this.cycleH);
 					setTimeout(function() {$(o.s,o.c).cycle(options)}, opts.requeueTimeout);
 					requeue = true;
 					return false; // break each loop
