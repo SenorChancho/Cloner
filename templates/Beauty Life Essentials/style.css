@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/*
-Template Name: Dinilipi HTML Theme
-Template Author: WP Expand
-Author URL: http://wpexpand.com
-*/
-
-
 /* --------------------------------------------------------
 Table of Index
 -----------------------------------------------------------
@@ -168,9 +161,9 @@ ul.nav.navbar-nav li ul.dropdown-menu li a { text-transform: none; font-weight: 
     background-size: cover;
     background-position: center center;
 }
-.slide-1 { background-image: url(images/blog1.jpg) }
-.slide-2 { background-image: url(images/blog2.jpg) }
-.slide-3 { background-image: url(images/blog3.jpg) }
+.slide-1 { background-image: url('images/blog1.jpg') }
+.slide-2 { background-image: url('images/blog2.jpg') }
+.slide-3 { background-image: url('images/blog3.jpg') }
 
 .slides .owl-nav {
     left: 0;

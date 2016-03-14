@@ -20,8 +20,9 @@ var beautyLifeEssentials = require('./beautyLifeEssentials');
 const end_timeout = 5000;
 
 const articleCount = 3;
-const previewCount = 75;
-var badWords = ["the", "of", "a", "an", "on", "to", "this", "that", "skin", "hair", "muscle", "muscles", "nail", "nails", "fitness", "weight", "beauty", "fat"];
+const articlePreviewCount = 75;
+const aboutPreviewCount = 20;
+var badWords = ["the", "of", "a", "an", "on", "to", "this", "that", "skin", "hair", "muscle", "muscles", "nail", "nails", "fitness", "weight", "beauty", "fat", "fit", "exercise"];
 var port = process.env.PORT || 3000;
 
 
@@ -85,15 +86,15 @@ app.post('/', function(req, res) {
                 // Articles and article previews
                 htmlText = htmlText.replaceAll('{{article1_title}}', req.body.article1_title);
                 htmlText = htmlText.replaceAll('{{article1}}', helper.replaceNewLines(req.body.article1));
-                htmlText = htmlText.replaceAll('{{article1_preview}}', createPreview(helper.replaceNewLines(req.body.article1)));
+                htmlText = htmlText.replaceAll('{{article1_preview}}', createPreview(helper.replaceNewLines(req.body.article1), articlePreviewCount));
 
                 htmlText = htmlText.replaceAll('{{article2_title}}', req.body.article2_title);
                 htmlText = htmlText.replaceAll('{{article2}}', helper.replaceNewLines(req.body.article2));
-                htmlText = htmlText.replaceAll('{{article2_preview}}', createPreview(helper.replaceNewLines(req.body.article2)));
+                htmlText = htmlText.replaceAll('{{article2_preview}}', createPreview(helper.replaceNewLines(req.body.article2), articlePreviewCount));
 
                 htmlText = htmlText.replaceAll('{{article3_title}}', req.body.article3_title);
                 htmlText = htmlText.replaceAll('{{article3}}', helper.replaceNewLines(req.body.article3));
-                htmlText = htmlText.replaceAll('{{article3_preview}}', createPreview(helper.replaceNewLines(req.body.article3)));
+                htmlText = htmlText.replaceAll('{{article3_preview}}', createPreview(helper.replaceNewLines(req.body.article3), articlePreviewCount));
 
                 // Action phrase
                 htmlText = htmlText.replaceAll('{{action}}', req.body.action_phrase);
@@ -112,6 +113,7 @@ app.post('/', function(req, res) {
                 htmlText = htmlText.replaceAll('{{slide1_caption}}', req.body.caption1);
                 htmlText = htmlText.replaceAll('{{slide2_caption}}', req.body.caption2);
                 htmlText = htmlText.replaceAll('{{slide3_caption}}', req.body.caption3);
+                htmlText = htmlText.replaceAll('{{about_preview}}', createPreview(helper.replaceNewLines(req.body.about), aboutPreviewCount));
 
 
                 // Replace file names
@@ -120,7 +122,12 @@ app.post('/', function(req, res) {
                 htmlText = htmlText.replaceAll('blog3', getFileName(req, "blog3.html"));
 
                 // Write file to directory
-                fs.writeFile(path.join(safeSitePath, getFileName(req, item) + ".html"), htmlText);
+                if (item.indexOf('.html') > -1) {
+                    fs.writeFile(path.join(safeSitePath, getFileName(req, item) + ".html"), htmlText);
+                }
+                else {
+                    fs.writeFile(path.join(safeSitePath, getFileName(req, item) + ".css"), htmlText);
+                }
             }
             else {
                 // Copy rest of files
@@ -182,6 +189,7 @@ app.post('/', function(req, res) {
             break;
         case "Beauty Life Essentials":
             beautyLifeEssentials.getUniqueFiles(req, safeSitePath);
+            break;
         default:
             break;
     }
@@ -207,7 +215,7 @@ app.listen(port, function() {
 
 });
 
-function createPreview(entry) {
+function createPreview(entry, previewCount) {
     var words = entry.split(' ');
     var preview = "";
 
