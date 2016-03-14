@@ -69,64 +69,64 @@ app.post('/', function(req, res) {
     fs.readdir(templatePath, function(err, files) {
         files.forEach(function(item) {
             if (item.indexOf('.html') > -1 || item.indexOf('.css') > -1) {
-                var htmlText = fs.readFileSync(path.join(templatePath, item), "UTF-8");
+                var fileText = fs.readFileSync(path.join(templatePath, item), "UTF-8");
 
                 // Title and OG Data
-                htmlText = htmlText.replaceAll('{{title}}', req.body.safe_site_name);
-                htmlText = htmlText.replaceAll('{{title_no_spaces}}', req.body.safe_site_name.replaceAll(' ', ''));
+                fileText = fileText.replaceAll('{{title}}', req.body.safe_site_name);
+                fileText = fileText.replaceAll('{{title_no_spaces}}', req.body.safe_site_name.replaceAll(' ', ''));
 
                 // Blog author
-                htmlText = htmlText.replaceAll('{{writer}}', req.body.writer_name);
+                fileText = fileText.replaceAll('{{writer}}', req.body.writer_name);
 
                 // About
                 var aboutText = req.body.about.replaceAll('{{title}}', req.body.safe_site_name);
                 aboutText = aboutText.replaceAll('{{writer}}', req.body.writer_name);
-                htmlText = htmlText.replaceAll('{{about}}', helper.replaceNewLines(aboutText));
+                fileText = fileText.replaceAll('{{about}}', helper.replaceNewLines(aboutText));
 
                 // Articles and article previews
-                htmlText = htmlText.replaceAll('{{article1_title}}', req.body.article1_title);
-                htmlText = htmlText.replaceAll('{{article1}}', helper.replaceNewLines(req.body.article1));
-                htmlText = htmlText.replaceAll('{{article1_preview}}', createPreview(helper.replaceNewLines(req.body.article1), articlePreviewCount));
+                fileText = fileText.replaceAll('{{article1_title}}', req.body.article1_title);
+                fileText = fileText.replaceAll('{{article1}}', helper.replaceNewLines(req.body.article1));
+                fileText = fileText.replaceAll('{{article1_preview}}', createPreview(helper.replaceNewLines(req.body.article1), articlePreviewCount));
 
-                htmlText = htmlText.replaceAll('{{article2_title}}', req.body.article2_title);
-                htmlText = htmlText.replaceAll('{{article2}}', helper.replaceNewLines(req.body.article2));
-                htmlText = htmlText.replaceAll('{{article2_preview}}', createPreview(helper.replaceNewLines(req.body.article2), articlePreviewCount));
+                fileText = fileText.replaceAll('{{article2_title}}', req.body.article2_title);
+                fileText = fileText.replaceAll('{{article2}}', helper.replaceNewLines(req.body.article2));
+                fileText = fileText.replaceAll('{{article2_preview}}', createPreview(helper.replaceNewLines(req.body.article2), articlePreviewCount));
 
-                htmlText = htmlText.replaceAll('{{article3_title}}', req.body.article3_title);
-                htmlText = htmlText.replaceAll('{{article3}}', helper.replaceNewLines(req.body.article3));
-                htmlText = htmlText.replaceAll('{{article3_preview}}', createPreview(helper.replaceNewLines(req.body.article3), articlePreviewCount));
+                fileText = fileText.replaceAll('{{article3_title}}', req.body.article3_title);
+                fileText = fileText.replaceAll('{{article3}}', helper.replaceNewLines(req.body.article3));
+                fileText = fileText.replaceAll('{{article3_preview}}', createPreview(helper.replaceNewLines(req.body.article3), articlePreviewCount));
 
                 // Action phrase
-                htmlText = htmlText.replaceAll('{{action}}', req.body.action_phrase);
+                fileText = fileText.replaceAll('{{action}}', req.body.action_phrase);
 
                 // Contact
-                htmlText = htmlText.replaceAll('{{contact}}', req.body.contact);
+                fileText = fileText.replaceAll('{{contact}}', req.body.contact);
 
                 // Quote
-                htmlText = htmlText.replaceAll('{{quote}}', req.body.quote);
+                fileText = fileText.replaceAll('{{quote}}', req.body.quote);
 
                 // Misc
-                htmlText = htmlText.replaceAll('{{who_we_are}}', req.body.who_we_are);
-                htmlText = htmlText.replaceAll('{{what_we_do}}', req.body.what_we_do);
-                htmlText = htmlText.replaceAll('{{stay_in_touch}}', req.body.stay_in_touch);
-                htmlText = htmlText.replaceAll('{{welcome}}', req.body.welcome);
-                htmlText = htmlText.replaceAll('{{slide1_caption}}', req.body.caption1);
-                htmlText = htmlText.replaceAll('{{slide2_caption}}', req.body.caption2);
-                htmlText = htmlText.replaceAll('{{slide3_caption}}', req.body.caption3);
-                htmlText = htmlText.replaceAll('{{about_preview}}', createPreview(helper.replaceNewLines(req.body.about), aboutPreviewCount));
+                fileText = fileText.replaceAll('{{who_we_are}}', req.body.who_we_are);
+                fileText = fileText.replaceAll('{{what_we_do}}', req.body.what_we_do);
+                fileText = fileText.replaceAll('{{stay_in_touch}}', req.body.stay_in_touch);
+                fileText = fileText.replaceAll('{{welcome}}', req.body.welcome);
+                fileText = fileText.replaceAll('{{slide1_caption}}', req.body.caption1);
+                fileText = fileText.replaceAll('{{slide2_caption}}', req.body.caption2);
+                fileText = fileText.replaceAll('{{slide3_caption}}', req.body.caption3);
+                fileText = fileText.replaceAll('{{about_preview}}', createPreview(helper.replaceNewLines(req.body.about), aboutPreviewCount));
 
 
                 // Replace file names
-                htmlText = htmlText.replaceAll('blog1', getFileName(req, "blog1.html"));
-                htmlText = htmlText.replaceAll('blog2', getFileName(req, "blog2.html"));
-                htmlText = htmlText.replaceAll('blog3', getFileName(req, "blog3.html"));
+                fileText = fileText.replaceAll('blog1', getFileName(req, "blog1.html"));
+                fileText = fileText.replaceAll('blog2', getFileName(req, "blog2.html"));
+                fileText = fileText.replaceAll('blog3', getFileName(req, "blog3.html"));
 
                 // Write file to directory
                 if (item.indexOf('.html') > -1) {
-                    fs.writeFile(path.join(safeSitePath, getFileName(req, item) + ".html"), htmlText);
+                    fs.writeFile(path.join(safeSitePath, getFileName(req, item) + ".html"), fileText);
                 }
                 else {
-                    fs.writeFile(path.join(safeSitePath, getFileName(req, item) + ".css"), htmlText);
+                    fs.writeFile(path.join(safeSitePath, item), fileText);
                 }
             }
             else {
