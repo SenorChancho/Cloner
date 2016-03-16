@@ -22,7 +22,7 @@ const end_timeout = 5000;
 
 const articleCount = 3;
 const articlePreviewCount = 75;
-const aboutPreviewCount = 20;
+const aboutPreviewCount = 10;
 var badWords = ["the", "of", "a", "an", "on", "to", "this", "that", "skin", "hair", "muscle", "muscles", "nail", "nails", "fitness", "weight", "beauty", "fat", "fit", "exercise"];
 var port = process.env.PORT || 3000;
 
@@ -147,7 +147,7 @@ app.post('/', function(req, res) {
         });
     });
 
-    if (req.body.templateType.toString() !== "Beauty Life Essentials" || req.body.templateType.toString() !== "Science of Athletics") {
+    if (req.body.templateType.toString() !== "Beauty Life Essentials" && req.body.templateType.toString() !== "Science of Athletics") {
         // Article photos
         for (var index = 1; index <= articleCount; index++) {
             var endPath = path.join(safeSitePath, 'images', getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");

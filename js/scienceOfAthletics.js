@@ -9,11 +9,11 @@ function getUniqueFiles(req, safeSitePath) {
     for (var index = 1; index <= 3; index++) {
         var endPath = path.join(safeSitePath, 'images', helper.getArticleFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
         var endPathog = path.join(safeSitePath, 'images', "og" + helper.getArticleFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
-        var endPathThumb = path.join(safeSitePath, 'images', helper.getArticleFileName(req, 'blog' + index.toString() + '.html') + "_thumb" + ".jpg");
+
 
         var fieldName = "article" + index.toString() + "_photo";
         var fieldNameIndex = helper.findWithAttr(req.files, "fieldname", fieldName);
-        (function (endPath, endPathog, endPathThumb, i) {
+        (function (endPath, endPathog, i) {
 
             console.log(req.files);
             fs.rename(req.files[i].path, endPath, function (err) {
@@ -28,7 +28,7 @@ function getUniqueFiles(req, safeSitePath) {
                 });
 
             });
-        })(endPath, endPathog, endPathThumb, fieldNameIndex);
+        })(endPath, endPathog, fieldNameIndex);
     }
 
     // About photo
