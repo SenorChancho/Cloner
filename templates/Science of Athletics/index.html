@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html  prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/index.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,noarchive" />
+
+    <title>{{title}}</title>
+    <meta name="description" content="">
+
+    <!-- START: styles -->
+    <link href='https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="assets/flatness/bootstrap/css/bootstrap.min.css" id="css-flatness-bootstrap" />
+    <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/slick.js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/slick.js/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/flatness/css/flatness.min.css" id="css-flatness" />
+    <link rel="stylesheet" type="text/css" href="assets/flatness/css/flatness.css" />
+    <!-- END: styles -->
+
+    <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
+</head>
+
+<!--
+    Available classes:
+    navbar-fixed     - fixed navbar on top screen
+    navbar-small     - small navbar height
+    navbar-collapsed - collapsed navbar to burger
+-->
+
+<body data-offset="100">
+
+    <!-- START: preloader -->
+    <div class="page-preloader">
+        <div class="wrap">
+            <div class="shadow"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <!-- END: preloader -->
+
+    <!-- START: navbar -->
+    <nav class="navbar navbar-flatness">
+        <div id="navbar" class="navbar-collapse collapse navbar-table">
+            <ul class="nav navbar-nav navbar-cell-left">
+                <li class="dropdown dropdown-hover  active ">
+                    <a href="index.html" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                </li>
+                <li class="dropdown dropdown-hover">
+                    <a href="about.html" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-cell">
+                <li>
+                    <a class="navbar-brand" href="index.html">
+
+                         <img src="images/logo.png"  >
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-cell-right">
+                <li class="dropdown dropdown-hover ">
+                    <a href="contact.html" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
+                </li>
+                <li class="dropdown dropdown-hover ">
+                    <a href="privacy.html" role="button" aria-haspopup="true" aria-expanded="false">Privacy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="off-canvas" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- END: navbar -->
+
+    <!-- START: posts slider -->
+    <section class="container view">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="flatness-slider" data-slick='{"autoplay": true, "autoplaySpeed": 8000}'>
+                    <div class="item" style="background-image: url(images/food.jpg);">
+                        <div>
+                            <div class="post">
+                                <h2 class="post-title display-1 mt-0"><a href="blog3.html">{{article3_title}}</a></h2>
+                                <div class="post-meta">
+                                    <a href="#" class="post-author">{{writer}}</a>
+                                    <span class="separator">-</span>
+                                    <a href="#" class="post-date">1st Nov 2015</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(images/stretch.jpg);">
+                        <div>
+                            <div class="post">
+                                <h2 class="post-title display-1 mt-0"><a href="blog2.html">{{article2_title}}</a></h2>
+                                <div class="post-meta">
+                                    <a href="#" class="post-author">{{writer}}</a>
+                                    <span class="separator">-</span>
+                                    <a href="#" class="post-date">25th Oct 2015</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: posts slider -->
+
+    <!-- START: featured posts -->
+    <section class="container view">
+        <h2 class="display-1 text-center">Featured Posts</h2>
+        <div class="row vertical-gutter">
+            <div class="col-md-4">
+                <div class="post post-thumbnail">
+                    <div class="post-img">
+                        <a class="hover-effect-1 img-rounded" href="blog1.html">
+                            <img src="images/yoga.jpg" alt="">
+                        </a>
+                    </div>
+                    <h2 class="post-title display-4"><a href="blog1.html">{{article1_title}}</a></h2>
+                    <div class="post-meta post-meta-top">
+                        <a href="#" class="post-author">{{writer}}</a>
+                        <span class="separator">-</span>
+                        <a href="#" class="post-date">15th Oct 2015</a>
+                    </div>
+                    <div class="clearfix pb-10"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="post post-thumbnail">
+                    <div class="post-img">
+                        <a class="hover-effect-1 img-rounded" href="blog2.html">
+                            <img src="images/stretch.jpg" alt="">
+                        </a>
+                    </div>
+                    <h2 class="post-title display-4"><a href="blog2.html">{{article2_title}}</a></h2>
+                    <div class="post-meta post-meta-top">
+                        <a href="#" class="post-author">{{writer}}</a>
+                        <span class="separator">-</span>
+                        <a href="#" class="post-date">25th Oct 2015</a>
+                    </div>
+                    <div class="clearfix pb-10"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="post post-thumbnail">
+                    <div class="post-img">
+                        <a class="hover-effect-1 img-rounded" href="blog3.html">
+                            <img src="images/food.jpg" alt="">
+                        </a>
+                    </div>
+                    <h2 class="post-title display-4"><a href="blog3.html">{{article3_title}}</a></h2>
+                    <div class="post-meta post-meta-top">
+                        <a href="#" class="post-author">{{writer}}</a>
+                        <span class="separator">-</span>
+                        <a href="#" class="post-date">1st Nov 2015</a>
+                    </div>
+                    <div class="clearfix pb-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: featured posts -->
+
+    <section class="container view">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- START: post with dropcat -->
+                <div class="post post-default post-dropcat">
+                    <div class="post-img">
+                        <a class="hover-effect-1 img-rounded" href="blog3.html">
+                            <img src="images/food.jpg" alt="">
+                        </a>
+                    </div>
+                    <h2 class="post-title display-1">
+        <a href="blog3.html">{{article3_title}}</a>
+    </h2>
+                    <div class="post-meta post-meta-top">
+                        <a href="#" class="post-author">{{writer}}</a>
+                        <span class="separator">-</span>
+                        <a href="#" class="post-date">1st Nov 2015</a>
+                    </div>
+                    <div class="post-divider">
+                        <img src="images/divider-light.png">
+                    </div>
+                    <div class="post-entire">
+                        <p>{{article3_preview}}
+                        </p>
+
+                    </div>
+                    <div class="post-read-more">
+                        <a class="btn btn-default btn-rounded" href="blog3.html">Read More</a>
+                    </div>
+                    <div class="post-meta-bottom">
+                        <div class="col-sm-6 meta-cell-left">
+                            <a href="blog3.html#comments" class="post-comments"><i class="fa fa-comment"></i> 1</a>
+                            <a href="#" class="post-likes"><i class="fa fa-heart-o"></i> 31</a>
+                        </div>
+                        <div class="col-sm-6 meta-cell-right">
+                            <a href="#" class="post-share"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-pinterest"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                        <!-- <a href="#" class="post-tag">Story</a>
+        <a href="#" class="post-tag">Good day</a> -->
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- END: post with dropcat -->
+
+                <!-- START: post blockquote -->
+                <div class="post post-blockquote">
+                    <div class="post-cont">
+                        <blockquote>
+                            <p>{{quote}}</p>
+
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- END: post blockquote -->
+
+                <!-- START: post music -->
+                <div class="post post-default post-dropcat">
+                    <div class="post-img">
+                        <a class="hover-effect-1 img-rounded" href="blog2.html">
+                            <img src="images/stretch.jpg" alt="">
+                        </a>
+                    </div>
+                    <h2 class="post-title display-1">
+                        <a href="blog2.html">{{article2_title}}</a>
+                    </h2>
+                    <div class="post-meta post-meta-top">
+                        <a href="#" class="post-author">{{writer}}</a>
+                        <span class="separator">-</span>
+                        <a href="#" class="post-date">25th Oct 2015</a>
+                    </div>
+                    <div class="post-divider">
+                        <img src="images/divider-light.png">
+                    </div>
+                    <div class="post-entire">
+                        <p>{{article2_preview}}
+                        </p>
+                    </div>
+                    <div class="post-read-more">
+                        <a class="btn btn-default btn-rounded" href="blog2.html">Read More</a>
+                    </div>
+                    <div class="post-meta-bottom">
+                        <div class="col-sm-6 meta-cell-left">
+                            <a href="blog2.html#comments" class="post-comments"><i class="fa fa-comment"></i> 1</a>
+                            <a href="#" class="post-likes"><i class="fa fa-heart-o"></i> 31</a>
+                        </div>
+                        <div class="col-sm-6 meta-cell-right">
+                            <a href="#" class="post-share"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-pinterest"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                        <!-- <a href="#" class="post-tag">Story</a>
+        <a href="#" class="post-tag">Good day</a> -->
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- END: post music -->
+
+                <div class="post post-default post-dropcat">
+                    <div class="post-img">
+                        <a class="hover-effect-1 img-rounded" href="blog1.html">
+                            <img src="images/yoga.jpg" alt="">
+                        </a>
+                    </div>
+                    <h2 class="post-title display-1">
+                        <a href="blog1.html">{{article1_title}}</a>
+                    </h2>
+                    <div class="post-meta post-meta-top">
+                        <a href="#" class="post-author">{{writer}}</a>
+                        <span class="separator">-</span>
+                        <a href="#" class="post-date">15th Oct 2015</a>
+                    </div>
+                    <div class="post-divider">
+                        <img src="images/divider-light.png">
+                    </div>
+                    <div class="post-entire">
+                        <p>>{{article1}}
+                        </p>
+
+                    </div>
+                    <div class="post-read-more">
+                        <a class="btn btn-default btn-rounded" href="blog1.html">Read More</a>
+                    </div>
+                    <div class="post-meta-bottom">
+                        <div class="col-sm-6 meta-cell-left">
+                            <a href="blog1.html#comments" class="post-comments"><i class="fa fa-comment"></i> 1</a>
+                            <a href="#" class="post-likes"><i class="fa fa-heart-o"></i> 31</a>
+                        </div>
+                        <div class="col-sm-6 meta-cell-right">
+                            <a href="#" class="post-share"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-pinterest"></i></a>
+                            <a href="#" class="post-share"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <ul class="pager">
+                    <li class="previous"><a href="#"><span aria-hidden="true">←</span> Older Posts</a>
+                    </li>
+                    <!-- <li class="next"><a href="#">Newer Posts <span aria-hidden="true">→</span></a>
+    </li> -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- START: footer social -->
+    <section class="footer-social inverted">
+        <div class="container">
+            <ul class="social-icons">
+                <li>
+                    <a href="http://instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instagram</a>
+                </li>
+                <li>
+                    <a href="http://youtube.com" target="_blank"><i class="fa fa-youtube"></i> Youtube</a>
+                </li>
+                <li>
+                    <a href="http://twitter.com" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                    <a href="http://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i> Pinterest</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- END: footer social -->
+
+    <!-- START: footer instagram -->
+
+    <!-- END: footer instagram -->
+
+    <!-- START: footer menu -->
+    <section class="inverted footer-menu">
+        <div class="container">
+            <a class="footer-brand" href="index.html">
+
+                 <img src="images/logo.png"  >
+            </a>
+            <ul class="nav">
+                <li><a href="about.html">About Me</a>
+                </li>
+                <li class="separator">/</li>
+                <li><a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </div>
+    </section>
+    <!-- END: footer menu -->
+
+    <!-- START: footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="col-sm-12 text-center">
+                <em>All Rights Reserved &copy; <a href="privacy.html">Privacy</a></em>
+            </div>
+        </div>
+    </footer>
+    <!-- END: footer -->
+
+
+    <!-- START: facebook API -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            if(location.protocol === 'file:') {
+                return;
+            }
+        
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- END: facebook API -->
+
+    <!-- START: scripts -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/flatness/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/slick.js/slick/slick.min.js"></script>
+    <script type="text/javascript" src="bower_components/theia-sticky-sidebar/js/theia-sticky-sidebar.js"></script>
+    <script type="text/javascript" src="assets/flatness/js/flatness.min.js"></script>
+    <!-- END: scripts -->
+
+    <!-- START: init flatness -->
+    <script>
+        if(typeof flatness !== 'undefined') {
+            flatness.init({
+                stickySidebar:    true,  // enable sticky sidebar
+                navbarMax:        200,   // max height of navbar
+                navbarMin:        100    // min height of navbar
+            });
+        }
+    </script>
+    <!-- END: init flatness -->
+
+</body>
+
+</html>

@@ -16,6 +16,7 @@ var lifeAndBeauty = require('./lifeAndBeauty.js');
 var instantBulk = require('./instantBulk.js');
 var terraHairDesign = require('./terraHairDesign.js');
 var beautyLifeEssentials = require('./beautyLifeEssentials');
+var scienceOfAthletics = require('./scienceOfAthletics');
 
 const end_timeout = 5000;
 
@@ -146,7 +147,7 @@ app.post('/', function(req, res) {
         });
     });
 
-    if (req.body.templateType.toString() !== "Beauty Life Essentials") {
+    if (req.body.templateType.toString() !== "Beauty Life Essentials" || req.body.templateType.toString() !== "Science of Athletics") {
         // Article photos
         for (var index = 1; index <= articleCount; index++) {
             var endPath = path.join(safeSitePath, 'images', getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
@@ -189,6 +190,9 @@ app.post('/', function(req, res) {
             break;
         case "Beauty Life Essentials":
             beautyLifeEssentials.getUniqueFiles(req, safeSitePath);
+            break;
+        case "Science of Athletics":
+            scienceOfAthletics.getUniqueFiles(req, safeSitePath);
             break;
         default:
             break;

@@ -19,6 +19,7 @@
         <option value="Instant Bulk">Instant Bulk</option>
         <option value="Terra Hair Design">Terra Hair Design</option>
         <option value="Beauty Life Essentials">Beauty Life Essentials</option>
+        <option value="Science of Athletics">Science of Athletics</option>
     </select>
 
     <label for="safe_site_name">Safe Site Name</label>
@@ -288,6 +289,16 @@
                 $welcomeLabel.show();
                 break;
             case "Beauty Life Essentials":
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
+                break;
+            case "Science of Athletics":
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $contactPhoto.show().prop('required', true);
+                $contactPhotoLabel.show();
+
                 $aboutPhoto.show().prop('required', true);
                 $aboutPhotoLabel.show();
                 break;

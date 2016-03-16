@@ -1,0 +1,2 @@
+To prevent some unused dependencies use this bower installer:
+npm install -g https://github.com/SignalDancer/bower/tarball/Bower-Ignore-Dependencies
