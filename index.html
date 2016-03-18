@@ -20,6 +20,7 @@
         <option value="Terra Hair Design">Terra Hair Design</option>
         <option value="Beauty Life Essentials">Beauty Life Essentials</option>
         <option value="Science of Athletics">Science of Athletics</option>
+        <option value="Hannah's Beauty Blog">Hannah's Beauty Blog</option>
     </select>
 
     <label for="safe_site_name">Safe Site Name</label>
@@ -64,6 +65,8 @@
     <label for="caption3">Caption</label>
     <input type="text" name="caption3" id="caption3" required>
 
+    <label for="cover_photo">Cover Photo</label>
+    <input class="drop" type="file" name="cover_photo" id="cover_photo" required>
 
     <label for="quote">Quote</label>
     <input type="text" name="quote" id="quote" required>
@@ -165,7 +168,8 @@
         var $welcome = $('#welcome');
         var $welcomeLabel = $('label[for=welcome], input#welcome');
 
-
+        var $coverPhoto = $('#cover_photo');
+        var $coverPhotoLabel = $('label[for=cover_photo], input#cover_photo');
 
         $contact.hide().prop('required', false);
         $contactLabel.hide();
@@ -207,6 +211,9 @@
 
         $welcome.hide().prop('required', false);
         $welcomeLabel.hide();
+
+        $coverPhoto.hide().prop('required', false);
+        $coverPhotoLabel.hide();
 
         switch (selectedValue) {
             case "Strong Evo":
@@ -302,6 +309,16 @@
                 $aboutPhoto.show().prop('required', true);
                 $aboutPhotoLabel.show();
                 break;
+            case "Hannah's Beauty Blog":
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
+
+                $coverPhoto.show().prop('required', true);
+                $coverPhotoLabel.show();
+                break;
             default:
                 break;
         }
@@ -319,8 +336,7 @@
 
     $('#clear').click(function() {
         var $downloads = $('#downloads');
-        console.log($downloads.html());
-        console.log('omg');
+
         $downloads.empty();
         $.ajax({
             url: "/clear",

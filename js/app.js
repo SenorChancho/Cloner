@@ -17,6 +17,7 @@ var instantBulk = require('./instantBulk.js');
 var terraHairDesign = require('./terraHairDesign.js');
 var beautyLifeEssentials = require('./beautyLifeEssentials');
 var scienceOfAthletics = require('./scienceOfAthletics');
+var hannahBeautyBlog = require('./hannahBeautyBlog');
 
 const end_timeout = 5000;
 
@@ -147,7 +148,9 @@ app.post('/', function(req, res) {
         });
     });
 
-    if (req.body.templateType.toString() !== "Beauty Life Essentials" && req.body.templateType.toString() !== "Science of Athletics") {
+    if (req.body.templateType.toString() !== "Beauty Life Essentials"
+        && req.body.templateType.toString() !== "Science of Athletics"
+        && req.body.templateType.toString() !== "Hannah's Beauty Blog") {
         // Article photos
         for (var index = 1; index <= articleCount; index++) {
             var endPath = path.join(safeSitePath, 'images', getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
@@ -193,6 +196,9 @@ app.post('/', function(req, res) {
             break;
         case "Science of Athletics":
             scienceOfAthletics.getUniqueFiles(req, safeSitePath);
+            break;
+        case "Hannah's Beauty Blog":
+            hannahBeautyBlog.getUniqueFiles(req, safeSitePath);
             break;
         default:
             break;
