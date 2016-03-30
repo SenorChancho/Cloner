@@ -309,6 +309,7 @@ hr.fullwd {
 	float: none;
     height: auto;
     width: auto;
+  max-height: 80%;
     margin: 20px 0;
     text-align: center;
 }

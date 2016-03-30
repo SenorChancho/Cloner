@@ -119,10 +119,10 @@ function getFileName(req, oldName) {
             newFileName = req.body.article3_title;
         }
         else if (oldName === "blog4.html") {
-            newFileName = req.body.article3_title;
+            newFileName = req.body.article4_title;
         }
-        else if (oldName === "blog4.html") {
-            newFileName = req.body.article3_title;
+        else if (oldName === "blog5.html") {
+            newFileName = req.body.article5_title;
         }
 
         newFileName = newFileName.toLowerCase();
