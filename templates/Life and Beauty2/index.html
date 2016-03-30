@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/index.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,noarchive" />
+
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG_0.0.7a-min.js""></script><script>DD_belatedPNG.fix('.png, .btn, .simple');</script>
+<![endif]-->
+
+<title>{{title}} | Home</title>
+
+
+</head>
+<body id="index">
+<div id="smallheader">						<!-- Start of Header Part !-->
+    <div class="wrapper">
+
+        <div id="logo">
+            <img src="images/logo.png" alt="your name" class="png"/>
+        </div>
+
+    </div>
+</div>									<!-- End of Header Part !-->
+
+<div id="contentpart">						<!-- Start of Content Part !-->
+
+        <div class="nav">
+        <ul class="menu">					<!-- This is the menu !-->
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+        </ul> 
+		</div>
+	<div class="wrapper">
+        <div id="content"> 					      
+        
+            <div id="column1">
+            <h2>Who we are</h2>
+            <p class="home"><img src="images/icon1.png" alt="example" width="48" height="48" class="simple" />{{who_we_are}}</p>
+            </div>
+
+            <div id="column2">
+            <h2>What we do</h2>
+            <p class="home"><img src="images/icon2.png" alt="example" width="48" height="48" class="simple"/>{{what_we_do}}</p>
+            </div>
+
+            <div id="column3">
+                <h2>Stay in touch</h2>
+                <p class="home"><img src="images/icon3.png" alt="example" width="48" height="48" class="simple"/>{{stay_in_touch}}
+                    <br> <a id="signup" href="contact.html">Sign up here!</a></p>
+            </div>
+
+        </div>
+        <div style="clear:both;"></div>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <hr>
+        <div id="bottom">
+
+            <div class="left">
+                <ul>
+                    <li><a href="index.html">Home</a> | </li>
+                    <li><a href="blog.html">Blog</a> | </li>
+                    <li><a href="about.html">About</a> | </li>
+                    <li><a href="privacy.html">Privacy</a> | </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li> &copy; 2015 {{title}}. </li>
+                </ul>
+            </div>
+        </div>
+        
+	</div>
+</div>										<!-- End of Content Part !-->
+</body>
+</html>

@@ -105,9 +105,57 @@ function getArticleFileName(req, oldName) {
     return oldName.replace('.html', '');
 }
 
+function getFileName(req, oldName) {
+    if (oldName === "blog1.html" || oldName === "blog2.html" || oldName === "blog3.html" || oldName === "blog4.html" || oldName === "blog5.html") {
+        var newFileName = "";
+
+        if (oldName === "blog1.html") {
+            newFileName = req.body.article1_title;
+        }
+        else if (oldName === "blog2.html") {
+            newFileName = req.body.article2_title;
+        }
+        else if (oldName === "blog3.html") {
+            newFileName = req.body.article3_title;
+        }
+        else if (oldName === "blog4.html") {
+            newFileName = req.body.article3_title;
+        }
+        else if (oldName === "blog4.html") {
+            newFileName = req.body.article3_title;
+        }
+
+        newFileName = newFileName.toLowerCase();
+        var fileWords = newFileName.split(' ');
+        fileWords = fileWords.filter(function(x) { return badWords.indexOf(x) < 0});
+        newFileName = fileWords.join(' ');
+        newFileName = newFileName.replace(/[^\w\s]/gi, '');
+        newFileName = newFileName.toCamelCase();
+        newFileName = newFileName.trim();
+
+        return newFileName;
+    }
+
+    return oldName.replace('.html', '');
+}
+
+function getNumberOfArticles(req) {
+    if(req.body.article5.toString() !== "") {
+        return 5;
+    }
+    if(req.body.article4.toString() !== "") {
+        return 4;
+    }
+
+    return 3;
+
+}
+
 exports.replaceNewLines = replaceNewLines;
 exports.findWithAttr = findWithAttr;
 exports.zipFile = zipFile;
 exports.resizePhoto = resizePhoto;
 exports.getZipLinks = getZipLinks;
 exports.getArticleFileName = getArticleFileName;
+exports.getFileName = getFileName;
+exports.getNumberOfArticles = getNumberOfArticles;

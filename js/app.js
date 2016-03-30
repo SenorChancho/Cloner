@@ -18,6 +18,7 @@ var terraHairDesign = require('./terraHairDesign.js');
 var beautyLifeEssentials = require('./beautyLifeEssentials');
 var scienceOfAthletics = require('./scienceOfAthletics');
 var hannahBeautyBlog = require('./hannahBeautyBlog');
+var strongEvo = require('./StrongEvo');
 
 const end_timeout = 5000;
 
@@ -98,6 +99,14 @@ app.post('/', function(req, res) {
                 fileText = fileText.replaceAll('{{article3}}', helper.replaceNewLines(req.body.article3));
                 fileText = fileText.replaceAll('{{article3_preview}}', createPreview(helper.replaceNewLines(req.body.article3), articlePreviewCount));
 
+                fileText = fileText.replaceAll('{{article4_title}}', req.body.article4_title);
+                fileText = fileText.replaceAll('{{article4}}', helper.replaceNewLines(req.body.article4));
+                fileText = fileText.replaceAll('{{article4_preview}}', createPreview(helper.replaceNewLines(req.body.article4), articlePreviewCount));
+
+                fileText = fileText.replaceAll('{{article5_title}}', req.body.article5_title);
+                fileText = fileText.replaceAll('{{article5}}', helper.replaceNewLines(req.body.article5));
+                fileText = fileText.replaceAll('{{article5_preview}}', createPreview(helper.replaceNewLines(req.body.article5), articlePreviewCount));
+
                 // Action phrase
                 fileText = fileText.replaceAll('{{action}}', req.body.action_phrase);
 
@@ -115,17 +124,19 @@ app.post('/', function(req, res) {
                 fileText = fileText.replaceAll('{{slide1_caption}}', req.body.caption1);
                 fileText = fileText.replaceAll('{{slide2_caption}}', req.body.caption2);
                 fileText = fileText.replaceAll('{{slide3_caption}}', req.body.caption3);
-                fileText = fileText.replaceAll('{{about_preview}}', createPreview(helper.replaceNewLines(req.body.about), aboutPreviewCount));
+                fileText = fileText.replaceAll('{{about_preview}}', createPreview(helper.replaceNewLines(aboutText), aboutPreviewCount));
 
 
                 // Replace file names
-                fileText = fileText.replaceAll('blog1', getFileName(req, "blog1.html"));
-                fileText = fileText.replaceAll('blog2', getFileName(req, "blog2.html"));
-                fileText = fileText.replaceAll('blog3', getFileName(req, "blog3.html"));
+                fileText = fileText.replaceAll('blog1', helper.getFileName(req, "blog1.html"));
+                fileText = fileText.replaceAll('blog2', helper.getFileName(req, "blog2.html"));
+                fileText = fileText.replaceAll('blog3', helper.getFileName(req, "blog3.html"));
+                fileText = fileText.replaceAll('blog4', helper.getFileName(req, "blog4.html"));
+                fileText = fileText.replaceAll('blog5', helper.getFileName(req, "blog5.html"));
 
                 // Write file to directory
                 if (item.indexOf('.html') > -1) {
-                    fs.writeFile(path.join(safeSitePath, getFileName(req, item) + ".html"), fileText);
+                    fs.writeFile(path.join(safeSitePath, helper.getFileName(req, item) + ".html"), fileText);
                 }
                 else {
                     fs.writeFile(path.join(safeSitePath, item), fileText);
@@ -148,57 +159,36 @@ app.post('/', function(req, res) {
         });
     });
 
-    if (req.body.templateType.toString() !== "Beauty Life Essentials"
-        && req.body.templateType.toString() !== "Science of Athletics"
-        && req.body.templateType.toString() !== "Hannah's Beauty Blog") {
-        // Article photos
-        for (var index = 1; index <= articleCount; index++) {
-            var endPath = path.join(safeSitePath, 'images', getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
-            var endPathog = path.join(safeSitePath, 'images', "og" + getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
-
-            var fieldName = "article" + index.toString() + "_photo";
-            var fieldNameIndex = helper.findWithAttr(req.files, "fieldname", fieldName);
-            (function (endPath, endPathog, i) {
-
-                console.log(req.files);
-                fs.rename(req.files[i].path, endPath, function (err) {
-                    if (err) throw err;
-
-                    reSizePhoto(req.body.templateType, endPath, endPathog);
-                    // Delete the temp file
-                    fs.unlink(req.files[i].path, function () {
-                        if (err) throw err;
-                    });
-                });
-            })(endPath, endPathog, fieldNameIndex);
-        }
-    }
-
     // Template specific files
-    switch (req.body.templateType) {
+    var templateType = req.body.templateType.toString().replace(new RegExp("[0-9]", "g"), "");
+
+    switch (templateType) {
+        case "Strong Evo":
+            strongEvo.clone(req, safeSitePath);
+            break;
         case "Challenger Fit Blog":
-            challengerFitBlog.getUniqueFiles(req, safeSitePath);
+            challengerFitBlog.clone(req, safeSitePath);
             break;
         case "Pure Hair Salon":
-            pureHairSalon.getUniqueFiles(req, safeSitePath);
+            pureHairSalon.clone(req, safeSitePath);
             break;
         case "Life and Beauty":
-            lifeAndBeauty.getUniqueFiles(req, safeSitePath);
+            lifeAndBeauty.clone(req, safeSitePath);
             break;
         case "Instant Bulk":
-            instantBulk.getUniqueFiles(req, safeSitePath);
+            instantBulk.clone(req, safeSitePath);
             break;
         case "Terra Hair Design":
-            terraHairDesign.getUniqueFiles(req, safeSitePath);
+            terraHairDesign.clone(req, safeSitePath);
             break;
         case "Beauty Life Essentials":
-            beautyLifeEssentials.getUniqueFiles(req, safeSitePath);
+            beautyLifeEssentials.clone(req, safeSitePath);
             break;
         case "Science of Athletics":
-            scienceOfAthletics.getUniqueFiles(req, safeSitePath);
+            scienceOfAthletics.clone(req, safeSitePath);
             break;
         case "Hannah's Beauty Blog":
-            hannahBeautyBlog.getUniqueFiles(req, safeSitePath);
+            hannahBeautyBlog.clone(req, safeSitePath);
             break;
         default:
             break;
@@ -217,8 +207,6 @@ app.post('/', function(req, res) {
     });
 
     setTimeout(helper.zipFile, end_timeout, safeSitePath, res, relZipPath);
-
-
 });
 
 app.listen(port, function() {
@@ -252,81 +240,81 @@ Array.prototype.last = function() {
     return this[this.length - 1];
 };
 
-function getFileName(req, oldName) {
-    if (oldName === "blog1.html" || oldName === "blog2.html" || oldName === "blog3.html") {
-        var newFileName = "";
+//function helper.getFileName(req, oldName) {
+//    if (oldName === "blog1.html" || oldName === "blog2.html" || oldName === "blog3.html") {
+//        var newFileName = "";
+//
+//        if (oldName === "blog1.html") {
+//            newFileName = req.body.article1_title;
+//        }
+//        else if (oldName === "blog2.html") {
+//            newFileName = req.body.article2_title;
+//        }
+//        else {
+//            newFileName = req.body.article3_title;
+//        }
+//        newFileName = newFileName.toLowerCase();
+//        var fileWords = newFileName.split(' ');
+//        fileWords = fileWords.filter(function(x) { return badWords.indexOf(x) < 0});
+//        newFileName = fileWords.join(' ');
+//        newFileName = newFileName.replace(/[^\w\s]/gi, '');
+//        newFileName = newFileName.toCamelCase();
+//        newFileName = newFileName.trim();
+//
+//        return newFileName;
+//    }
+//
+//    return oldName.replace('.html', '');
+//}
 
-        if (oldName === "blog1.html") {
-            newFileName = req.body.article1_title;
-        }
-        else if (oldName === "blog2.html") {
-            newFileName = req.body.article2_title;
-        }
-        else {
-            newFileName = req.body.article3_title;
-        }
-        newFileName = newFileName.toLowerCase();
-        var fileWords = newFileName.split(' ');
-        fileWords = fileWords.filter(function(x) { return badWords.indexOf(x) < 0});
-        newFileName = fileWords.join(' ');
-        newFileName = newFileName.replace(/[^\w\s]/gi, '');
-        newFileName = newFileName.toCamelCase();
-        newFileName = newFileName.trim();
-
-        return newFileName;
-    }
-
-    return oldName.replace('.html', '');
-}
-
-function reSizePhoto(template, src, dest) {
-    // Resize to template size
-    var width = 0;
-    var height = 0;
-
-    switch (template) {
-        case "Strong Evo":
-            width = 225;
-            height = 154;
-            break;
-        case "Pure Hair Salon":
-            width = 225;
-            height = 225;
-            break;
-        case "Life and Beauty":
-            width = 250;
-            height = 160;
-            break;
-        case "Challenger Fit Blog":
-            width = 250;
-            height = 250;
-            break;
-        case "Instant Bulk":
-            width = 225;
-            height = 150;
-            break;
-        case "Terra Hair Design":
-            width = 175;
-            height = 200;
-            break;
-        default:
-            break;
-    }
-    imageMagick(src)
-        .resize(width, height, '^')
-        .gravity('Center')
-        .crop(width, height)
-
-        .write(src, function (err) {
-            if (err) console.log(err);
-            else {
-                // Make OG copy
-                imageMagick(src)
-                    .resize(1200, 1200, '^')
-                    .autoOrient()
-                    .write(dest, function (err) {
-                        if (err) console.log(err);
-                    });
-            }
-        });
-}
+//function reSizePhoto(template, src, dest) {
+//    // Resize to template size
+//    var width = 0;
+//    var height = 0;
+//
+//    switch (template) {
+//        case "Strong Evo":
+//            width = 225;
+//            height = 154;
+//            break;
+//        case "Pure Hair Salon":
+//            width = 225;
+//            height = 225;
+//            break;
+//        case "Life and Beauty":
+//            width = 250;
+//            height = 160;
+//            break;
+//        case "Challenger Fit Blog":
+//            width = 250;
+//            height = 250;
+//            break;
+//        case "Instant Bulk":
+//            width = 225;
+//            height = 150;
+//            break;
+//        case "Terra Hair Design":
+//            width = 175;
+//            height = 200;
+//            break;
+//        default:
+//            break;
+//    }
+//    imageMagick(src)
+//        .resize(width, height, '^')
+//        .gravity('Center')
+//        .crop(width, height)
+//
+//        .write(src, function (err) {
+//            if (err) console.log(err);
+//            else {
+//                // Make OG copy
+//                imageMagick(src)
+//                    .resize(1200, 1200, '^')
+//                    .autoOrient()
+//                    .write(dest, function (err) {
+//                        if (err) console.log(err);
+//                    });
+//            }
+//        });
+//}

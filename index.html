@@ -12,15 +12,23 @@
 <form action="/" method="post" enctype="multipart/form-data">
     <label for="template">Template</label>
     <select name="templateType" id="template">
-        <option value="Life and Beauty">Life and Beauty</option>
-        <option value="Strong Evo">Strong Evo</option>
-        <option value="Challenger Fit Blog">Challenger Fit Blog</option>
-        <option value="Pure Hair Salon">Pure Hair Salon</option>
-        <option value="Instant Bulk">Instant Bulk</option>
-        <option value="Terra Hair Design">Terra Hair Design</option>
-        <option value="Beauty Life Essentials">Beauty Life Essentials</option>
-        <option value="Science of Athletics">Science of Athletics</option>
-        <option value="Hannah's Beauty Blog">Hannah's Beauty Blog</option>
+        <option value="Life and Beauty" disabled>Life and Beauty</option>
+        <option value="Life and Beauty2">Life and Beauty 2</option>
+        <option value="Strong Evo" disabled>Strong Evo</option>
+        <option value="Strong Evo2">Strong Evo 2</option>
+        <option value="Challenger Fit Blog" disabled>Challenger Fit Blog</option>
+        <option value="Challenger Fit Blog2">Challenger Fit Blog 2</option>
+        <option value="Pure Hair Salon" disabled>Pure Hair Salon</option>
+        <option value="Pure Hair Salon2">Pure Hair Salon 2</option>
+        <option value="Instant Bulk" disabled>Instant Bulk</option>
+        <option value="Instant Bulk2">Instant Bulk 2</option>
+        <option value="Terra Hair Design" disabled>Terra Hair Design</option>
+        <option value="Terra Hair Design2">Terra Hair Design 2</option>
+        <option value="Beauty Life Essentials" disabled>Beauty Life Essentials</option>
+        <option value="Science of Athletics" disabled>Science of Athletics</option>
+        <option value="Science of Athletics2">Science of Athletics 2</option>
+        <option value="Hannah's Beauty Blog" disabled>Hannah's Beauty Blog</option>
+        <option value="Hannah's Beauty Blog2">Hannah's Beauty Blog 2</option>
     </select>
 
     <label for="safe_site_name">Safe Site Name</label>
@@ -83,38 +91,62 @@
     <label for="welcome">Welcome</label>
     <input type="text" name="welcome" id="welcome" required>
 
-    <fieldset>
-        <label for="article1_title">First Article Title</label>
-        <input type="text" name="article1_title" id="article1_title" required>
+    <div>
+        <fieldset>
+            <label for="article1_title">First Article Title</label>
+            <input type="text" name="article1_title" id="article1_title" required>
 
-        <label for="article1">First Article</label>
-        <textarea name="article1" id="article1" cols="25" rows="10" required></textarea>
+            <label for="article1">First Article</label>
+            <textarea name="article1" id="article1" cols="25" rows="10" required></textarea>
 
-        <label for="article1_photo">First Article Photo</label>
-        <input class="drop adjust" type="file" name="article1_photo" id="article1_photo" required>
-    </fieldset>
+            <label for="article1_photo">First Article Photo</label>
+            <input class="drop adjust" type="file" name="article1_photo" id="article1_photo" required>
+        </fieldset>
 
-    <fieldset>
-        <label for="article2_title">Second Article Title</label>
-        <input type="text" name="article2_title" id="article2_title" required>
+        <fieldset>
+            <label for="article2_title">Second Article Title</label>
+            <input type="text" name="article2_title" id="article2_title" required>
 
-        <label for="article2">Second Article</label>
-        <textarea name="article2" id="article2" cols="25" rows="10" required></textarea>
+            <label for="article2">Second Article</label>
+            <textarea name="article2" id="article2" cols="25" rows="10" required></textarea>
 
-        <label for="article2_photo">Second Article Photo</label>
-        <input class="drop adjust" type="file" name="article2_photo" id="article2_photo" required>
-    </fieldset>
+            <label for="article2_photo">Second Article Photo</label>
+            <input class="drop adjust" type="file" name="article2_photo" id="article2_photo" required>
+        </fieldset>
 
-    <fieldset>
-        <label for="article3_title">Third Article Title</label>
-        <input type="text" name="article3_title" id="article3_title" required>
+        <fieldset>
+            <label for="article3_title">Third Article Title</label>
+            <input type="text" name="article3_title" id="article3_title" required>
 
-        <label for="article3">Third Article</label>
-        <textarea name="article3" id="article3" cols="25" rows="10" required></textarea>
+            <label for="article3">Third Article</label>
+            <textarea name="article3" id="article3" cols="25" rows="10" required></textarea>
 
-        <label for="article3_photo">Third Article Photo</label>
-        <input class="drop adjust" type="file" name="article3_photo" id="article3_photo" required>
-    </fieldset>
+            <label for="article3_photo">Third Article Photo</label>
+            <input class="drop adjust" type="file" name="article3_photo" id="article3_photo" required>
+        </fieldset>
+
+        <fieldset id="article4Set">
+            <label for="article4_title">Fourth Article Title</label>
+            <input type="text" name="article4_title" id="article4_title">
+
+            <label for="article4">Fourth Article</label>
+            <textarea name="article4" id="article4" cols="25" rows="10"></textarea>
+
+            <label for="article4_photo">Fourth Article Photo</label>
+            <input class="drop adjust" type="file" name="article4_photo" id="article4_photo">
+        </fieldset>
+
+        <fieldset id="article5Set">
+            <label for="article5_title">Fifth Article Title</label>
+            <input type="text" name="article5_title" id="article5_title">
+
+            <label for="article5">Fifth Article</label>
+            <textarea name="article5" id="article5" cols="25" rows="10"></textarea>
+
+            <label for="article5_photo">Fifth Article Photo</label>
+            <input class="drop adjust" type="file" name="article5_photo" id="article5_photo">
+        </fieldset>
+    </div>
 
     <label for="action_phrase">Action Phrase</label>
     <input type="text" name="action_phrase" id="action_phrase" required>
@@ -171,6 +203,9 @@
         var $coverPhoto = $('#cover_photo');
         var $coverPhotoLabel = $('label[for=cover_photo], input#cover_photo');
 
+        var $article4Set = $('#article4Set');
+        var $article5Set = $('#article5Set');
+
         $contact.hide().prop('required', false);
         $contactLabel.hide();
 
@@ -215,8 +250,17 @@
         $coverPhoto.hide().prop('required', false);
         $coverPhotoLabel.hide();
 
-        switch (selectedValue) {
+        $article4Set.hide();
+        $article5Set.hide();
+
+        var templateType = selectedValue.toString().replace(new RegExp("[0-9]", "g"), "");
+        console.log(templateType);
+        switch (templateType) {
             case "Strong Evo":
+                if(selectedValue.charAt(selectedValue.length - 1) === '2') {
+                    $article4Set.show();
+                    $article5Set.show();
+                }
                 break;
             case "Challenger Fit Blog":
                 $contact.show().prop('required', true);
@@ -224,6 +268,11 @@
 
                 $aboutPhoto.show().prop('required', true);
                 $aboutPhotoLabel.show();
+
+                if(selectedValue.charAt(selectedValue.length - 1) === '2') {
+                    $article4Set.show();
+                    $article5Set.show();
+                }
                 break;
             case "Pure Hair Salon":
                 $contact.show().prop('required', true);
@@ -240,6 +289,11 @@
 
                 $quote.show().prop('required', true);
                 $quoteLabel.show();
+
+                if(selectedValue.charAt(selectedValue.length - 1) === '2') {
+                    $article4Set.show();
+                    $article5Set.show();
+                }
                 break;
             case "Terra Hair Design":
                 $contact.show().prop('required', true);
@@ -253,6 +307,11 @@
 
                 $aboutPhoto.show().prop('required', true);
                 $aboutPhotoLabel.show();
+
+                if(selectedValue.charAt(selectedValue.length - 1) === '2') {
+                    $article4Set.show();
+                    $article5Set.show();
+                }
                 break;
             case "Life and Beauty":
                 $aboutPhoto.show().prop('required', true);
@@ -269,6 +328,11 @@
 
                 $stayInTouch.show().prop('required', true);
                 $stayInTouchLabel.show();
+
+                if(selectedValue.charAt(selectedValue.length - 1) === '2') {
+                    $article4Set.show();
+                    $article5Set.show();
+                }
                 break;
 
             case "Instant Bulk":
@@ -294,6 +358,11 @@
 
                 $welcome.show().prop('required', true);
                 $welcomeLabel.show();
+
+                if(selectedValue.charAt(selectedValue.length - 1) === '2') {
+                    $article4Set.show();
+                    $article5Set.show();
+                }
                 break;
             case "Beauty Life Essentials":
                 $aboutPhoto.show().prop('required', true);
@@ -308,6 +377,10 @@
 
                 $aboutPhoto.show().prop('required', true);
                 $aboutPhotoLabel.show();
+                if(selectedValue.charAt(selectedValue.length - 1) === '2') {
+                    $article4Set.show();
+                    $article5Set.show();
+                }
                 break;
             case "Hannah's Beauty Blog":
                 $contact.show().prop('required', true);
@@ -318,6 +391,11 @@
 
                 $coverPhoto.show().prop('required', true);
                 $coverPhotoLabel.show();
+
+                if(selectedValue.charAt(selectedValue.length - 1) === '2') {
+                    $article4Set.show();
+                    $article5Set.show();
+                }
                 break;
             default:
                 break;

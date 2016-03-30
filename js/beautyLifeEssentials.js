@@ -8,7 +8,8 @@ var helper = require('./helper');
 function getUniqueFiles(req, safeSitePath) {
 
     // Article photos
-    for (var index = 1; index <= 3; index++) {
+    var articleCount = helper.getNumberOfArticles(req);
+    for (var index = 1; index <= articleCount; index++) {
         var endPath = path.join(safeSitePath, 'images', helper.getArticleFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
         var endPathog = path.join(safeSitePath, 'images', "og" + helper.getArticleFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
         var endPathThumb = path.join(safeSitePath, 'images', helper.getArticleFileName(req, 'blog' + index.toString() + '.html') + "_thumb" + ".jpg");
@@ -68,4 +69,4 @@ function getUniqueFiles(req, safeSitePath) {
 
 }
 
-exports.getUniqueFiles = getUniqueFiles;
+exports.clone = getUniqueFiles;

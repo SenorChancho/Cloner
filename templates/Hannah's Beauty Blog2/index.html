@@ -1,0 +1,606 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" class="no-js" lang="en">
+    <head>
+        <meta property="og:title" content="{{title}}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://{{title_no_spaces}}.com/index.html" />
+        <meta property="og:image" content="http://{{title_no_spaces}}.com/images/ogLogo.png" />
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Specific Meta
+        ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="robots" content="noindex,nofollow,noarchive" />
+
+        <!-- Titles
+        ================================================== -->
+        <title>{{title}}</title>
+
+        <!-- Custom Font
+        ================================================== -->
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic%7CLato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="fonts/font-awsome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="fonts/glimmer/glimmer-shape.css">
+
+        <!-- CSS
+        ================================================== -->
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="lib/justifiedgallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="colors/color-schemer.css">
+
+        <!-- Modernizr
+        ================================================== -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Header
+        ================================================== -->
+        <header id="masthead" class="site-header">
+           <!-- Header Top Part -->
+            <div id="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-search">
+
+                        </div> <!-- /.header-search -->
+
+                        <div class="header-social">
+                            <a target="_blank" href="http://facebook.com"><i class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="http://twitter.com"><i class="fa fa-twitter"></i></a>
+                            <a target="_blank" href="http://pinterest.com"><i class="fa fa-pinterest-p"></i></a>
+                            <a target="_blank" href="http://instagram.com"><span class="fa fa-instagram"></span></a>
+                        </div> <!-- /.top-social --> 
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- /#header-top -->
+            
+            <!-- Header Middle Part-->
+            <div id="header-middle">
+                <div class="container">
+                    <div class="row">
+                        <!-- Site Logo -->
+                        <div id="site-logo">
+                            <a href="index.html" class="site-logo">
+                                <img alt="logo" src="images/logo.png">
+                            </a> 
+                        </div> <!-- /#site-logo -->
+                        <!-- Navigation Left -->
+                        <nav class="site-navigation top-navigation">
+                            <div class="menu-wrapper">
+                                <div class="menu-content">
+                                    <ul class="menu-list">
+                                        <li><a href="index.html" class="active">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="privacy.html">Privacy</a></li>
+                                    </ul>
+                                </div>
+                            </div> <!-- /.menu-wrapper --> 
+                        </nav> <!-- /#nav-left -->
+                        <!-- Navigation Right -->
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.container --> 
+            </div> <!-- /#header-middle -->
+
+            <!-- Mobile Menu -->
+            <div class="menucontent overlapblackbg"></div>
+            <div class="menuexpandermain slideRight">
+                <a id="navToggle" class="animated-arrow slideLeft"><span></span></a>
+                <span id="menu-marker">Menu</span>
+            </div>
+
+            <div id="mobile-menu">
+                <nav class="top-menu slideLeft clearfix">
+                    <div class="menu-wrapper">
+                        <div class="container">
+                            <div class="row" id="mobile-menu-wrap"></div>
+                        </div>               
+                    </div> <!-- /.menu-wrapper -->
+                </nav> <!-- /.menu  -->
+            </div> <!-- /.#mobile menu -->
+        </header> <!-- /.site-header -->
+
+        <!-- Featured Area
+        ================================================== -->
+        <div id="featured" class="feature-area" style="background:url(images/cover.jpg)">
+            <div id="featured-overlay"></div>
+            <div id="featured-content">
+                <div class="container">
+                    <div class="row">       
+                        <div id="featured-slider" class="owl-carousel">
+                            <div class="item">
+                                <div class="post-thumb">
+                                    <img src="images/blog2.jpg" alt="">
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-format">
+                                        <i class="fa fa-image"></i>
+                                    </div>
+                                    <h2 class="entry-title"><a href="blog2.html" rel="bookmark">{{article2_title}}</a></h2>
+                                    <div class="entry-meta">
+                                        <span class="cat-links">
+                                                <a rel="category tag" href="#">Skin</a>
+                                        </span>
+                                        <span class="devider">/</span>
+                                        <span class="entry-date">October 14, 2015</span>
+                                    </div> <!-- .entry-meta -->
+                                    <div class="more-link-wrap">
+                                        <a href="blog2.html" class="more-link">Continue</a>
+                                    </div> <!-- /.more-link-wrap -->        
+                                </div> <!-- /.post-content -->
+                            </div> <!-- /.item -->
+
+                            <div class="item">
+                                <div class="post-thumb">
+                                    <img src="images/blog3.jpg" alt="">
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-format">
+                                        <i class="fa fa-image"></i>
+                                    </div>
+                                    <h2 class="entry-title"><a href="blog3.html" rel="bookmark">{{article3_title}}</a></h2>
+                                    <div class="entry-meta">
+                                        <span class="cat-links">
+                                                <a rel="category tag" href="#">MAX</a>
+                                        </span>
+                                        <span class="devider">/</span>
+                                        <span class="entry-date">September 15, 2015</span>
+                                    </div> <!-- .entry-meta -->
+                                    <div class="more-link-wrap">
+                                        <a href="blog3.html" class="more-link">Continue</a>
+                                    </div> <!-- /.more-link-wrap -->        
+                                </div> <!-- /.post-content -->
+                            </div> <!-- /.item --> 
+
+                            <div class="item">
+                                <div class="post-thumb">
+                                    <img src="images/blog1.jpg" alt="">
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-format">
+                                        <i class="fa fa-image"></i>
+                                    </div>
+                                    <h2 class="entry-title"><a href="blog1.html" rel="bookmark">{{article1_title}}</a></h2>
+                                    <div class="entry-meta">
+                                        <span class="cat-links">
+
+                                        </span>
+                                        <span class="devider">/</span>
+                                        <span class="entry-date">November 14, 2015</span>
+                                    </div> <!-- .entry-meta -->
+                                    <div class="more-link-wrap">
+                                        <a href="blog1.html" class="more-link">Continue</a>
+                                    </div> <!-- /.more-link-wrap -->       
+                                </div> <!-- /.post-content -->
+                            </div> <!-- /.item --> 
+
+
+                        </div> <!-- /#featured-slider  --> 
+                    </div>  <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- #featured-content -->
+        </div> <!-- /#featured -->
+
+        <!-- Main Content
+        ================================================== -->
+		<div id="content" class="site-content">
+			<div class="container" id="blog-content">
+				<div class="row">
+					<div class="col-md-8">
+						<!-- Content Area -->
+						<div id="primary" class="content-area">
+							<main id="main" class="site-main">
+                                <div class="row">
+                                    <!-- Full Post -->   
+                                    <div class="col-md-12 full-width"> 
+                                        <article class="post hentry">
+                                            <figure class="post-thumb">
+                                                <a href="blog1.html"><img src="images/blog1.jpg" class="img-responsive featuredPhoto" alt="travel-one"></a>
+                                            </figure> <!-- /.post-thumb -->
+
+                                            <header class="entry-header">
+                                                <div class="post-format">
+                                                    <i class="fa fa-image"></i>
+                                                </div>
+                                                <h2 class="entry-title"><a href="blog1.html" rel="bookmark">{{article1_title}}</a></h2>
+                                                <div class="entry-meta">
+                                                    <span class="cat-links">
+
+                                                    </span>
+                                                    <span class="devider">/</span>
+                                                    <span class="entry-date">November 14, 2015</span>
+                                                    <span class="devider">/</span>
+                                                    <span class="byline">
+                                                        <span class="author vcard">
+                                                            By: <a rel="author" href="#">{{writer}}</a>
+                                                        </span>
+                                                    </span>
+                                                </div> <!-- .entry-meta -->
+                                            </header> <!-- /.entry-header -->
+
+                                            <div class="entry-content">
+                                                <span class="screen-reader-text"></span>
+                                                <p>{{article1_preview}}
+                                                    <a href="blog1.html" class="more-link">Continue reading</a>
+                                                </p>
+                                            </div> <!-- .entry-content -->
+
+                                            <footer class="entry-footer clearfix">                          
+                                                <div class="footer-meta clearfix">  
+                                                    <div class="post-comment">
+                                                    </div>
+                                                    <div class="share-area">
+
+                                                    </div> <!-- /.share-area -->
+                                                    <div class="post-view">
+                                                        <a href="#" class="view-link">
+                                                            <span>55 Views</span>
+                                                        </a>
+                                                    </div>
+                                                </div> <!-- /.footer-meta -->
+                                            </footer> <!-- .entry-footer -->
+                                        </article> <!-- /.post-->
+                                    </div> <!-- /.col-md-12 -->
+                                    
+                                    <!-- Grid Post -->
+                                    <div class="col-md-12 ">
+                                        <div class="row" id="masonry-layout">          
+                                            <div class="col-md-6 col-sm-6 grid">
+                                                <article class="post hentry">
+                                                    <figure class="post-thumb">
+                                                        <a href="blog3.html"><img src="images/blog3.jpg" class="img-responsive" alt="grid-one"></a>
+                                                    </figure> <!-- /.post-thumb -->
+                                                    <header class="entry-header">
+                                                        <div class="post-format">
+                                                            <i class="fa fa-image"></i>
+                                                        </div>
+                                                        <h2 class="entry-title"><a href="blog3.html" rel="bookmark">{{article3_title}}</a></h2>
+                                                        <div class="entry-meta">
+                                                            <span class="cat-links">
+                                                                <a rel="category tag" href="#">Health</a>
+                                                            </span>
+                                                            <span class="devider">/</span>
+                                                            <span class="entry-date">September 15, 2015</span>
+                                                            <span class="devider">/</span>
+                                                            <span class="byline">
+                                                                <span class="author vcard">
+                                                                    By: <a rel="author" href="#">{{writer}}</a>
+                                                                </span>
+                                                            </span>
+                                                        </div> <!-- .entry-meta -->
+                                                    </header> <!-- /.entry-header -->
+
+                                                    <div class="entry-content">
+                                                        <span class="screen-reader-text"></span>
+                                                        <p>{{article3_preview}}
+                                                        </p>
+                                                    </div> <!-- .entry-content -->
+
+                                                    <footer class="entry-footer clearfix">    
+                                                        <div class="more-wraper">
+                                                            <a href="blog3.html" class="more-link">Continue</a>
+                                                        </div>                
+                                                        <div class="footer-meta">  
+                                                            <div class="share-area">
+                                                                <div> 
+                                                                    <a href="http://twitter.com"><span class="fa fa-twitter"></span></a>
+                                                                    <a href="http://facebook.com"><span class="fa fa-facebook"></span></a>
+
+                                                                    <a href="http://instagram.com"><span class="fa fa-instagram"></span></a>
+
+                                                                </div>
+                                                            </div> <!-- /.share-area -->
+                                                        </div> <!-- /.footer-meta -->
+                                                    </footer> <!-- .entry-footer -->
+                                                </article> <!-- /.post-->    
+                                            </div> <!-- /.grid -->
+
+                                            <div class="col-md-6 col-sm-6 grid">
+                                                <article class="post hentry">
+                                                    <figure class="post-thumb">
+                                                        <a href="blog2.html"><img src="images/blog2.jpg" class="img-responsive" alt="grid two"></a>
+                                                    </figure> <!-- /.post-thumb -->
+                                                    <header class="entry-header">
+                                                        <div class="post-format">
+                                                            <i class="fa fa-image"></i>
+                                                        </div>
+
+                                                        <h2 class="entry-title"><a href="blog2.html" rel="bookmark">{{article2_title}}</a></h2>
+                                                        <div class="entry-meta">
+                                                            <span class="cat-links">
+                                                                <a rel="category tag" href="blog2.html">Skin</a>
+                                                            </span>
+                                                            <span class="devider">/</span>
+                                                            <span class="entry-date">October 14, 2015</span>
+                                                            <span class="devider">/</span>
+                                                            <span class="byline">
+                                                                <span class="author vcard">
+                                                                    By: <a rel="author" href="#">{{writer}}</a>
+                                                                </span>
+                                                            </span>
+                                                        </div> <!-- .entry-meta -->
+                                                    </header> <!-- /.entry-header -->
+
+                                                    <div class="entry-content">
+                                                        <span class="screen-reader-text"></span>
+                                                        <p>{{article2_preview}}
+                                                            </p>
+                                                    </div> <!-- .entry-content -->
+
+                                                    <footer class="entry-footer clearfix">    
+                                                        <div class="more-wraper">
+                                                            <a href="blog2.html" class="more-link">Continue</a>
+                                                        </div>                
+                                                        <div class="footer-meta">  
+                                                            <div class="share-area">
+                                                                <div> 
+                                                                    <a href="http://twitter.com"><span class="fa fa-twitter"></span></a>
+                                                                    <a href="http://facebook.com"><span class="fa fa-facebook"></span></a>
+
+                                                                    <a href="http://instagram.com"><span class="fa fa-instagram"></span></a>
+
+                                                                </div>
+                                                            </div> <!-- /.share-area -->
+                                                        </div> <!-- /.footer-meta -->
+                                                    </footer> <!-- .entry-footer -->
+                                                </article> <!-- /.post --> 
+                                            </div> <!-- /.Grid -->
+                                    <div class="col-md-12 col-sm-12 full-width"></div>
+                                </div> <!-- /.row -->
+                                        </div>
+                                    <!-- Grid Post -->
+                                    <div class="col-md-12 ">
+                                        <div class="row" id="masonry-layout">          
+                                            <div class="col-md-6 col-sm-6 grid">
+                                                <article class="post hentry">
+                                                    <figure class="post-thumb">
+                                                        <a href="blog4.html"><img src="images/blog4.jpg" class="img-responsive" alt="grid-one"></a>
+                                                    </figure> <!-- /.post-thumb -->
+                                                    <header class="entry-header">
+                                                        <div class="post-format">
+                                                            <i class="fa fa-image"></i>
+                                                        </div>
+                                                        <h2 class="entry-title"><a href="blog4.html" rel="bookmark">{{article4_title}}</a></h2>
+                                                        <div class="entry-meta">
+                                                            <span class="cat-links">
+                                                                <a rel="category tag" href="#">Health</a>
+                                                            </span>
+                                                            <span class="devider">/</span>
+                                                            <span class="entry-date">September 15, 2015</span>
+                                                            <span class="devider">/</span>
+                                                            <span class="byline">
+                                                                <span class="author vcard">
+                                                                    By: <a rel="author" href="#">{{writer}}</a>
+                                                                </span>
+                                                            </span>
+                                                        </div> <!-- .entry-meta -->
+                                                    </header> <!-- /.entry-header -->
+
+                                                    <div class="entry-content">
+                                                        <span class="screen-reader-text"></span>
+                                                        <p>{{article4_preview}}
+                                                        </p>
+                                                    </div> <!-- .entry-content -->
+
+                                                    <footer class="entry-footer clearfix">    
+                                                        <div class="more-wraper">
+                                                            <a href="blog4.html" class="more-link">Continue</a>
+                                                        </div>                
+                                                        <div class="footer-meta">  
+                                                            <div class="share-area">
+                                                                <div> 
+                                                                    <a href="http://twitter.com"><span class="fa fa-twitter"></span></a>
+                                                                    <a href="http://facebook.com"><span class="fa fa-facebook"></span></a>
+
+                                                                    <a href="http://instagram.com"><span class="fa fa-instagram"></span></a>
+
+                                                                </div>
+                                                            </div> <!-- /.share-area -->
+                                                        </div> <!-- /.footer-meta -->
+                                                    </footer> <!-- .entry-footer -->
+                                                </article> <!-- /.post-->    
+                                            </div> <!-- /.grid -->
+
+                                            <div class="col-md-6 col-sm-6 grid">
+                                                <article class="post hentry">
+                                                    <figure class="post-thumb">
+                                                        <a href="blog5.html"><img src="images/blog5.jpg" class="img-responsive" alt="grid two"></a>
+                                                    </figure> <!-- /.post-thumb -->
+                                                    <header class="entry-header">
+                                                        <div class="post-format">
+                                                            <i class="fa fa-image"></i>
+                                                        </div>
+
+                                                        <h2 class="entry-title"><a href="blog2.html" rel="bookmark">{{article5_title}}</a></h2>
+                                                        <div class="entry-meta">
+                                                            <span class="cat-links">
+                                                                <a rel="category tag" href="blog2.html">Skin</a>
+                                                            </span>
+                                                            <span class="devider">/</span>
+                                                            <span class="entry-date">October 14, 2015</span>
+                                                            <span class="devider">/</span>
+                                                            <span class="byline">
+                                                                <span class="author vcard">
+                                                                    By: <a rel="author" href="#">{{writer}}</a>
+                                                                </span>
+                                                            </span>
+                                                        </div> <!-- .entry-meta -->
+                                                    </header> <!-- /.entry-header -->
+
+                                                    <div class="entry-content">
+                                                        <span class="screen-reader-text"></span>
+                                                        <p>{{article5_preview}}
+                                                            </p>
+                                                    </div> <!-- .entry-content -->
+
+                                                    <footer class="entry-footer clearfix">    
+                                                        <div class="more-wraper">
+                                                            <a href="blog5.html" class="more-link">Continue</a>
+                                                        </div>                
+                                                        <div class="footer-meta">  
+                                                            <div class="share-area">
+                                                                <div> 
+                                                                    <a href="http://twitter.com"><span class="fa fa-twitter"></span></a>
+                                                                    <a href="http://facebook.com"><span class="fa fa-facebook"></span></a>
+
+                                                                    <a href="http://instagram.com"><span class="fa fa-instagram"></span></a>
+
+                                                                </div>
+                                                            </div> <!-- /.share-area -->
+                                                        </div> <!-- /.footer-meta -->
+                                                    </footer> <!-- .entry-footer -->
+                                                </article> <!-- /.post --> 
+                                            </div> <!-- /.Grid -->
+                                    <div class="col-md-12 col-sm-12 full-width"></div>
+                                </div> <!-- /.row -->
+                                        </div>
+                                    </div>
+							</main> <!-- #main -->
+
+                            <!-- pagination -->
+                            <nav class="navigation paging-navigation">
+                                <ul class="nav-links">
+                                    <li class="nav-previous"> <!-- disabled class add when no pagination -->
+                                        <a href="#"><span class="fa fa-angle-double-left"></span>Previous</a>
+                                    </li>                                       
+                                    <li class="active">
+                                        <a><span class="page-numbers current">1</span></a>
+                                    </li>
+                                    <li class="nav-next">
+                                        <a href="#">Next<span class="fa fa-angle-double-right"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav> <!-- /.navigation -->
+						</div> <!-- #primary -->
+					</div> <!-- /.col-md-8 -->
+
+                    <div class="col-md-4">
+                        <!-- Sidebar -->
+                        <div id="secondary" class="widget-area">
+                            <aside class="widget widget_subscribe clearfix">
+                                <div class="widget-title-area">
+                                    <h5 class="widget-title"><span>Newsletter</span></h5> <!-- /.widget-title -->
+                                </div>
+                                <div class="newsletter-area">
+                                    <p>Sign up for a free consultation!</p>
+                                    <div class="form-newsletter">
+                                        <form id="newsletter-form" name="newsletter-form" method="post" action="http://softhopper.us11.list-manage.com/subscribe/post?u=559ff170eee6949a359c40740&amp;id=fbbd18e68b">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>
+                                                        <input type='text' name='FNAME' id='fullname' class="form-controller"  aria-required="true" placeholder="Your Name" value="">
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <p>
+                                                        <input type='email' name='EMAIL' id='email' class="form-controller"  aria-required="true" placeholder="Your Email" value="">
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                    <button type="submit"  value="Subscribe" id="mc-embedded-subscribe" class="mail-chip-button">Subscribe Us</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div> <!-- /.form-newsletter -->
+                                </div> <!-- /.newsletter-area -->
+                            </aside> <!-- /.widget -->
+                            <aside class="widget glimmer_about_widget clearfix">
+                                <div class="widget-title-area">
+                                    <h5 class="widget-title"><span>About</span></h5> <!-- /.widget-title -->
+                                </div> <!-- /.widget-title-area -->
+                                
+                                <div class="about-widget">
+                                    <figure class="author-image-home">
+                                        <img class="img-responsive" src="images/about.jpg" alt="">
+                                    </figure> <!-- /.author-image-home -->
+
+                                    <div class="about-description">
+                                        <h3 class="author-name">{{title}}</h3> <!-- /.author-name -->
+                                        <p>{{about_preview}}</p>
+                                        <a href="about.html" class="more-link">More Details</a>
+                                    </div> <!-- /.about-description -->  
+                                </div> <!-- /.about-widget -->   
+                            </aside> <!-- /.glimmer_about_widget -->
+
+                            <aside class="widget widget_tag_cloud clearfix">
+                                <div class="widget-title-area">
+                                    <h5 class="widget-title"><span>Tag Cloud</span></h5> <!-- /.widget-title -->
+                                </div> <!-- /.widget-title-area -->
+                              
+                                <div class="tagcloud">
+                                </div> 
+                            </aside> <!-- /.widget_tag_cloud -->
+
+
+                            <aside class="widget widget_text clearfix"> 
+                                <div class="widget-title-area">
+                                    <h5 class="widget-title"><span>Add Unit</span></h5> <!-- /.widget-title -->
+                                </div> <!-- /.widget-title-area -->           
+                                <div class="textwidget">
+                                    <a title="add" href="#">
+                                        <img src="images/add.jpg" alt="">
+                                    </a>
+                                </div> <!-- /.textwidget -->
+                            </aside> <!-- /.widget_text -->
+                        </div> <!-- #secondary -->  
+                    </div> <!-- .col-md-4 -->
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+			
+		</div><!-- #content -->
+
+        <!-- Footer
+        ================================================== --> 
+        <footer id="colophon" class="site-footer">
+            <div id="footer-top">
+
+            </div> <!-- #footer-top" -->
+
+            <div id="footer-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="widget widget_text clearfix">
+
+
+                            </div> <!-- /.widget_about_and_contact -->          
+                        </div> <!-- /.col-md-4 -->
+
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->         
+            </div> <!-- #footer-middle -->
+
+            <div id="footer-bottom">
+                <div class="container">
+                    <div class="copyright">
+                        <p>Copyright&copy; 2015 {{title}}. All right reserved. <a href="privacy.html">Privacy Policy</a></p>
+                    </div> <!-- /.copyright -->
+                </div> <!-- /.container -->
+            </div> <!-- /#footer-bottom -->
+
+        </footer><!-- #colophon -->
+
+        <!-- All The JS Files
+        ================================================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!-- jQuery -->
+        <script src="js/vendor/jquery-migrate.min.js"></script> <!-- jQuery-migrate -->
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+        <script src="js/owl.carousel.min.js"></script> <!-- Owl-carousel -->
+        <script src="lib/magnific-popup/jquery.magnific-popup.min.js"></script> <!-- Magnific-popup JS -->
+        <script src="lib/justifiedgallery/jquery.justifiedGallery.min.js"></script> <!-- Justified gallery JS -->
+        <script src="js/plugins.js"></script> <!-- Plugins JS -->
+        <script src="js/masonry.pkgd.js"></script> <!-- masonry JS -->
+        <script src="js/glimmer.js"></script> <!-- glimmer script -->
+	</body>
+</html>

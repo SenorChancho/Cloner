@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/contact.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex,follow" />
+    <title>{{title}}</title>
+    <link href="CSS/reset.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/screen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="main">
+    <div id="header">
+        <a href="index.html" id="logo">
+        <img src="images/logo.png" alt=""></a>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+    </div>
+    <div id="body">
+        <div id="menu">
+            <div>
+                <h2>Subscribe!</h2>
+                <br>
+                <input class="input" type="text" value="Enter your email here" onblur="if(this.value=='') this.value='Enter your email here'" onFocus="if(this.value =='Enter your email here' ) this.value=''" >
+                <br><br>
+                <a href="index.html" onClick="return alert('Thank you for subscribing!')">Subscribe</a>
+            </div>
+            <div>
+                <h2>Also Check Out...</h2>
+                <br>
+                <ul>
+                    <li>
+                        <a href="blog1.html">
+                            {{article1_title}} <br>
+                            <img src="images/blog1.jpg" alt="" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog2.html">
+                            {{article2_title}}
+                            <img src="images/blog2.jpg" alt="" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog3.html">
+                            {{article3_title}}
+                            <img src="images/blog3.jpg" alt="" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog4.html">
+                            {{article4_title}}
+                            <img src="images/blog4.jpg" alt="" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog5.html">
+                            {{article5_title}}
+                            <img src="images/blog5.jpg" alt="" width="150" height="150">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="content">
+
+            <div class="post">
+                <div class="text">
+                    <h1>Contact</h1>
+                    <p>{{contact}}</p>
+                    <form id="ContactForm">
+                        <div>
+                            <div class="wrapper">
+                                <span>Your Name:</span><input type="text" class="input">
+                            </div>
+                            <div class="wrapper">
+                                <span>Your E-mail:</span><input type="text" class="input" >
+                            </div>
+                            <div class="textarea_box">
+                                <span>Your Message:</span><textarea name="textarea" cols="1" rows="1"></textarea>
+                            </div>
+                            <a href="contact.html" onClick="return alert('Thank you for your email!')">Send</a>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"> <span>&copy; by {{title}} 2015</span></div>
+</div>
+</body>
+</html>

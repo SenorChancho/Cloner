@@ -1,0 +1,44 @@
+{
+  "name": "Flatness",
+  "version": "1.0.0",
+  "authors": [
+    "nK"
+  ],
+  "description": "Personal Blogging Template",
+  "license": "Envato REGULAR LICENSE",
+  "homepage": "http://nkdev.info",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
+    "fontawesome": "~4.4.0",
+    "ionicons": "~2.0.1",
+    "html5shiv": "~3.7.3",
+    "slick.js": "~1.5.8",
+    "masonry": "~3.3.2",
+    "photoswipe": "~4.1.0",
+    "bootstrap-sweetalert": "~0.4.5",
+    "ladda-bootstrap": "msurguy/ladda-bootstrap",
+    "bootstrap-validator": "~0.9.0",
+    "theia-sticky-sidebar": "~1.2.2",
+    "jarallax": "*",
+    "smoothscroll-for-websites": "galambalazs/smoothscroll-for-websites"
+  },
+  "ignoredDependencies": [
+    "bootstrap",
+    "spin.js",
+    "doc-ready",
+    "eventEmitter",
+    "eventie",
+    "fizzy-ui-utils",
+    "get-size",
+    "get-style-property",
+    "matches-selector",
+    "outlayer"
+  ]
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html  prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/privacy.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,noarchive" />
+
+    <title>{{title}}</title>
+    <meta name="description" content="">
+
+    <!-- START: styles -->
+    <link href='https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="assets/flatness/bootstrap/css/bootstrap.min.css" id="css-flatness-bootstrap" />
+    <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/slick.js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/slick.js/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/flatness/css/flatness.min.css" id="css-flatness" />
+    <link rel="stylesheet" type="text/css" href="assets/flatness/css/flatness.css" />
+    <!-- END: styles -->
+
+    <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
+</head>
+
+<!--
+    Available classes:
+    navbar-fixed     - fixed navbar on top screen
+    navbar-small     - small navbar height
+    navbar-collapsed - collapsed navbar to burger
+-->
+
+<body data-offset="100">
+
+    <!-- START: preloader -->
+    <div class="page-preloader">
+        <div class="wrap">
+            <div class="shadow"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <!-- END: preloader -->
+
+    <!-- START: navbar -->
+    <nav class="navbar navbar-flatness">
+        <div id="navbar" class="navbar-collapse collapse navbar-table">
+            <ul class="nav navbar-nav navbar-cell-left">
+                <li class="dropdown dropdown-hover">
+                    <a href="index.html" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                </li>
+                <li class="dropdown dropdown-hover">
+                    <a href="about.html" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-cell">
+                <li>
+                    <a class="navbar-brand" href="index.html">
+
+                        <img src="images/logo.png"  >
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-cell-right">
+                <li class="dropdown dropdown-hover ">
+                    <a href="contact.html" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
+                </li>
+                <li class="dropdown dropdown-hover ">
+                    <a href="privacy.html" role="button" aria-haspopup="true" aria-expanded="false">Privacy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="off-canvas" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- END: navbar -->
+
+    <!-- START: about -->
+    <section class="container view">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="post post-default">
+                    <h1 class="post-title display-1">Privacy</h1>
+                    <div class="post-meta post-meta-top"></div>
+
+                    <div class="post-entire">
+                        <p>Privacy Policy<br>
+                            <br>
+                            At {{title}}, the privacy of our audience is extremely important to us. Like many other websites, {{title}} makes use of log files. The information contained in a log file includes Internet Protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referral/exit pages, and number of clicks-per-visitor. This data is used to analyze trends, administer the site, track user movement, and gather demographic information &ndash; so that we may offer our readers a more personalized experience.<br>
+                            <br>
+                            We do not sell, trade, or otherwise transfer your personally identifiable information to additional parties without your consent. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.<br>
+                            <br>
+                            Our third-party advertisers may use cookies for the purpose of delivering ad-related material to you, as our readers, based on your unique visits at {{title}}. Please note: {{title}} has neither access to, nor control over, the cookies used by our advertisers.<br>
+                            <br>
+                            Our third-party advertising network servers may make use of forms of technology as a means of delivering featured advertisement links from our site directly to your browsers. These tools may also measure the effectiveness of their advertisements and/or to personalize the advertising content displayed on {{title}} and other sites; again, we have no control over the way in which these tools or methods are utilized by our third-party advertisers.<br>
+                            <br>
+                            To comply with the requirements of the Children&rsquo;s Online Privacy Protection Act (COPPA), we do not collect any information from anyone under 13 years of age. All editorial and advertisement content featured on {{title}} is age-appropriate for individuals who are at least 13 years old; however, our target audience consists of adults between the ages of 21-55.<br>
+                            <br>
+                            By using our site, you consent to {{title}}&rsquo;s privacy policy
+
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flatness-sticky-sidebar">
+                    <div class="widget">
+                        <form action="about.html" method="POST" role="form" class="flatness-form" data-toggle="validator">
+                            <h2 class="form-title">Newsletter</h2>
+                            <div class="form-group row">
+                                <div class="form-group col-sm-6">
+                                    <input type="email" name="email" class="form-control newsletter"  placeholder="Email" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default btn-block">Subscribe</button>
+                        </form>
+                    </div>
+                    <!-- START: About widget -->
+                    <div class="widget">
+                        <h4 class="display-4 widget-title">About</h4>
+                        <a href="about.html" class="hover-effect-1 img-circle mw-200 mauto">
+                            <img src="images/about.jpg" alt="">
+                        </a>
+                        <p class="mb-0 text-center">
+                            {{about_preview}} <br> <a href="about.html">more</a>
+                        </p>
+                    </div>
+                    <!-- END: About widget -->
+
+                    <!-- START: Social networking widget -->
+                    <div class="widget">
+                        <h4 class="display-4 widget-title">Social Networking</h4>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="http://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END: Social networking widget -->
+
+                    <!-- START: Popular posts widget -->
+
+                    <div class="widget">
+                        <h4 class="display-4 widget-title">Popular Posts</h4>
+
+                        <div class="media">
+                            <div class="media-left">
+                                <a class="hover-effect-1 img-rounded w-120" href="#">
+                                    <img src="images/food.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body post">
+                                <h3 class="post-title display-6"><a href="#">{{article3_title}}</a></h3>
+                                <div class="post-date post-meta"><a href="#">1st Nov 2015</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="media">
+                            <div class="media-left">
+                                <a class="hover-effect-1 img-rounded w-120" href="#">
+                                    <img src="images/stretch.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body post">
+                                <h3 class="post-title display-6"><a href="#">{{article2_title}}</a></h3>
+                                <div class="post-date post-meta"><a href="#">25th Oct 2015</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="media">
+                            <div class="media-left">
+                                <a class="hover-effect-1 img-rounded w-120" href="#">
+                                    <img src="images/yoga.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body post">
+                                <h3 class="post-title display-6"><a href="#">{{article1_title}}</a></h3>
+                                <div class="post-date post-meta"><a href="#">15th Oct 2015</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Popular posts widget -->
+
+
+
+                    <!-- START: Tags widget -->
+
+                    <!-- END: Tags widget -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: about -->
+
+    <!-- START: footer social -->
+
+    <section class="footer-social inverted">
+        <div class="container">
+            <ul class="social-icons">
+                <li>
+                    <a href="http://instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instagram</a>
+                </li>
+                <li>
+                    <a href="http://youtube.com" target="_blank"><i class="fa fa-youtube"></i> Youtube</a>
+                </li>
+                <li>
+                    <a href="http://twitter.com" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                    <a href="http://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i> Pinterest</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- END: footer social -->
+
+
+
+    <!-- START: footer instagram -->
+
+    <!-- END: footer instagram -->
+
+    <!-- START: footer menu -->
+    <section class="inverted footer-menu">
+        <div class="container">
+            <a class="footer-brand" href="index.html">
+
+                 <img src="images/logo.png"  >
+            </a>
+            <ul class="nav">
+                <li><a href="about.html">About</a>
+                </li>
+                <li class="separator">/</li>
+                <li><a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </div>
+    </section>
+    <!-- END: footer menu -->
+
+    <!-- START: footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="col-sm-12 text-center">
+                <em>All Rights Reserved &copy; <a href="privacy.html">Privacy</a></em>
+            </div>
+        </div>
+    </footer>
+    <!-- END: footer -->
+
+
+    <!-- START: facebook API -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            if(location.protocol === 'file:') {
+                return;
+            }
+        
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- END: facebook API -->
+
+    <!-- START: scripts -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/flatness/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/slick.js/slick/slick.min.js"></script>
+    <script type="text/javascript" src="bower_components/theia-sticky-sidebar/js/theia-sticky-sidebar.js"></script>
+    <script type="text/javascript" src="bower_components/smoothscroll-for-websites/SmoothScroll.js"></script>
+    <script type="text/javascript" src="assets/flatness/js/flatness.min.js"></script>
+    <!-- END: scripts -->
+
+    <!-- START: init flatness -->
+    <script>
+        if(typeof flatness !== 'undefined') {
+            flatness.init({
+                stickySidebar:    true,  // enable sticky sidebar
+                navbarMax:        200,   // max height of navbar
+                navbarMin:        100    // min height of navbar
+            });
+        }
+    </script>
+    <!-- END: init flatness -->
+
+</body>
+
+</html>

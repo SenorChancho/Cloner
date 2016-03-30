@@ -1,0 +1,61 @@
+/* 
+
+{{title}} - CSS File
+
+*/
+h1.title{border-bottom:solid 1px #efefef; padding-bottom:5px; margin-bottom:20px;}
+
+/* blog */
+.post{border-bottom:solid 1px #dddddd; padding:0px 0px 5px 0px; margin-bottom:20px;}
+.post h2{margin:0px 0px 2px 0px;}
+.post h2 a{text-decoration:none;}
+.post .author_name{padding-bottom:8px; display:block}
+a.more, a.more:visited{text-decoration:none; padding:10px 0px 0px 0px; font-size:11px;}
+a.more:hover{ text-decoration:underline;}
+.sidebar ul li ul li a:hover{text-decoration:underline;}
+.entry{float:left; width:470px;}
+.date{float:left; padding:10px 0px 0px 19px; width:150px}
+.date_box{color:#fff; padding:0px 0px 0px 35px}
+.day{display:block;}
+.datetime{display:block; padding:0px 0px 10px 0px;}
+.dt{float:left; font-size:30px; text-align:left; width:40px;}
+.my{float:left; font-size:11px; font-weight:bold;}
+.my .month{display:block; margin:0px; line-height:15px}
+.my .year{ display:block; margin:0px; line-height:10px}
+div.comment{display:block; clear:left}
+div.comment a, div.comment a:visited{text-decoration:none; color:#6b6b6b;}
+div.comment a:hover{text-decoration:underline;}
+.sidebar{padding:20px 0px 0px 0px}
+.sidebar ul{list-style-type:none; margin:0px 0px 30px 0px; padding:0px 0px 0px 0px;  border-top:solid 5px #666666;}
+.sidebar ul ul{border:none;}
+.sidebar ul li{list-style-type:none; margin:0px; padding:0px 15px 0px 0px; text-align:right}
+.sidebar ul li a, .sidebar ul li a:visited{text-decoration:none; line-height:20px;}
+.sidebar ul li ul li{padding:0px;}
+.sidebar h2{font-size:20px; margin-top:10px}
+
+.pagenav a, pagenav a:visited{text-decoration:none; padding:0px 2px;}
+.pagenav a.current{font-weight:bold;}
+
+
+/* Portfolio */
+ul.portfolio{margin:0px; padding:0px; list-style-type:none;}
+ul.portfolio li{margin:0px; padding:0px; list-style-type:none; display:inline; float:left; margin-right:35px; margin-bottom:25px;}
+ul.portfolio li.nomargin{margin-right:0px !important;}
+ul.portfolio li img{border:solid 1px #e0e0e0; padding:5px;}
+ul.portfolio h3 a, ul.portfolio h3 a:visited{color:#6b6b6b; text-decoration:none;}
+
+
+/* contact */
+form{margin:0; padding:0;}
+fieldset{border:0px;}
+#contact_form{margin:0 auto; position:relative}
+label{float:left; width:100px; margin-top:0px;}
+label.sp {width:3px;}
+span.error{color:red;text-align:left;}
+input.text-input{ margin:0px 8px 4px 0px; padding:2px 0; border:solid 1px #bcbcbc; vertical-align:middle}
+textarea.text-input{ margin:0px 8px 4px 0px; padding:2px 0; border:solid 1px #bcbcbc; vertical-align:top; width:280px;}
+#contact_form input:focus, #contact_form textarea:focus {border:solid 1px #dcdcdc; }
+input.button{background-color:#e0e0e0; background-image:url(../images/bg_send.gif); background-repeat:no-repeat; background-position:right center; color:#6b6b6b !important; padding:2px 10px 4px 10px; width:80px; position:absolute; left:118px; margin-top:5px; border:0px;cursor:pointer;}
+#message{ margin-left:0px;}
+#message h2	{}
+#message p{margin:6px 0px; }

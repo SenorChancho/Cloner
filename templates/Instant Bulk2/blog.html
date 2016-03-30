@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta property="og:title" content="{{title}}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://{{title_no_spaces}}.com/blog.html" />
+	<meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+
+<meta http-equiv="Content-Script-Type" content="text/javascript" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="" />
+<meta name="title" content="" />
+<meta name="description" content="" />
+	<meta name="robots" content="noindex,nofollow" />
+<title>{{title}} - Blog</title>
+<!-- ////////////////////////////////// -->
+<!-- //      Start Stylesheets       // -->
+<!-- ////////////////////////////////// -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/inner.css" rel="stylesheet" type="text/css" />
+<link href="css/color.css" rel="stylesheet" type="text/css" />
+<!-- ////////////////////////////////// -->
+<!-- //      Javascript Files        // -->
+<!-- ////////////////////////////////// -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script src="js/Franklin_Gothic_Book_400.font.js" type="text/javascript"></script>
+<script type="text/javascript">
+	 var browserName=navigator.appName; 
+	 if (browserName=="Microsoft Internet Explorer")
+	 {
+	  Cufon.replace('h1') ('h2') ('h3') ('h4') ('h5') ('h6') ('.dt') ('.month') ('.year')
+	 }else{
+	 Cufon.replace('h1') ('h2') ('h3') ('h4') ('h5') ('h6') ('#menu li a') ('.dt') ('.month') ('.year')
+	 }
+</script>
+<!--[if lte IE 7]>
+<link href="css/ie.css" rel="stylesheet" type="text/css" />
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+  DD_belatedPNG.fix('img, #top');
+</script>
+<![endif]--> 
+<script type="text/javascript" src="js/menu-collapsed.js" ></script>
+</head>
+
+<body>
+
+	<!-- BEGIN HEADER -->
+	<div id="top_container">
+		<div class="centercolumn">
+			<div id="top">
+				<div id="logo"><a href="index.html"><img src="images/logo.png" alt="" /></a></div>
+			</div><!-- end top -->
+		</div><!-- end centercolumn -->
+	</div><!-- end top container -->
+	<!-- END HEADER -->
+	
+	<!-- BEGIN CONTENT -->
+	<div id="content_container">
+		<div class="centercolumn">
+			<div id="content">
+				<div id="content_left">
+					<div id="navigation">
+						<ul id="menu" class="collapsible">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+							<li>
+								<a href="blog.html">Blog</a>
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+							<li>
+								<a href="privacy.html">Privacy</a>
+							</li>
+						</ul>
+						<div id="subscribe">
+							<br>
+							<h2><strong>Subscribe to our blog!</strong></h2>
+							<input class="input" type="text" value="Enter your email here" onblur="if(this.value=='') this.value='Enter your email here'" onFocus="if(this.value =='Enter your email here' ) this.value=''" >
+							<br>
+							<a href="index.html" onClick="return alert('Thank you for subscribing!')">Subscribe</a>
+						</div>
+					</div><!-- end navigation -->
+				</div><!-- end content left -->
+				<div id="content_right">
+					<div id="maincontent">
+						<div id="maintext">
+						<h1 class="title">Blog</h1>
+						<div class="post">
+							<div class="entry">
+							<h2><a href="blog1.html">{{article1_title}}</a></h2>
+							<small><span class="author_name">by {{writer}}</span> </small>
+							<p><img src="images/blog1.jpg" alt="" /></p>
+							<p>{{article1_preview}}</p>	
+
+							 <p> <a href="blog1.html" class="more">Continue Reading...</a></p>
+							</div>
+							<div class="date">
+							<div class="date_box">
+								<div class="day">Wednesday</div>
+								<div class="datetime">
+									<div class="dt">23</div>
+									<div class="my">
+										<span class="month">Nov</span>
+										<span class="year">2015</span>
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="post">
+							<div class="entry">
+							<h2><a href="blog2.html">{{article2_title}}</a></h2>
+							<small><span class="author_name">by {{writer}}</span> </small>
+							<p><img src="images/blog2.jpg" alt="" /></p>
+							<p>{{article2_preview}}</p>
+
+							 <p> <a href="blog2.html" class="more">Continue Reading...</a></p>
+							</div>
+							<div class="date">
+							<div class="date_box">
+								<div class="day">Sunday</div>
+								<div class="datetime">
+									<div class="dt">15</div>
+									<div class="my">
+										<span class="month">Nov</span>
+										<span class="year">2015</span>
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+
+							<div class="post">
+								<div class="entry">
+									<h2><a href="blog3.html">{{article3_title}}</a></h2>
+									<small><span class="author_name">by {{writer}}</span> </small>
+									<p><img src="images/blog3.jpg" alt="" /></p>
+									<p>{{article3_preview}}</p>
+
+
+									<p> <a href="blog3.html" class="more">Continue Reading...</a></p>
+								</div>
+								<div class="date">
+									<div class="date_box">
+										<div class="day">Wednesday</div>
+										<div class="datetime">
+											<div class="dt">13</div>
+											<div class="my">
+												<span class="month">Oct</span>
+												<span class="year">2015</span>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							
+							<div class="post">
+								<div class="entry">
+									<h2><a href="blog4.html">{{article4_title}}</a></h2>
+									<small><span class="author_name">by {{writer}}</span> </small>
+									<p><img src="images/blog4.jpg" alt="" /></p>
+									<p>{{article4_preview}}</p>
+
+
+									<p> <a href="blog4.html" class="more">Continue Reading...</a></p>
+								</div>
+								<div class="date">
+									<div class="date_box">
+										<div class="day">Wednesday</div>
+										<div class="datetime">
+											<div class="dt">23</div>
+											<div class="my">
+												<span class="month">Sept</span>
+												<span class="year">2015</span>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							
+							
+							<div class="post">
+								<div class="entry">
+									<h2><a href="blog5.html">{{article5_title}}</a></h2>
+									<small><span class="author_name">by {{writer}}</span> </small>
+									<p><img src="images/blog5.jpg" alt="" /></p>
+									<p>{{article5_preview}}</p>
+
+
+									<p> <a href="blog3.html" class="more">Continue Reading...</a></p>
+								</div>
+								<div class="date">
+									<div class="date_box">
+										<div class="day">Saturday</div>
+										<div class="datetime">
+											<div class="dt">15</div>
+											<div class="my">
+												<span class="month">Aug</span>
+												<span class="year">2015</span>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							
+
+						</div><!-- end maintext -->
+					</div><!-- end maincontent -->
+				</div><!-- end content right -->
+				<div class="clr"></div><!-- clear float left -->
+			</div><!-- end content -->
+		</div><!-- end centercolumn -->
+	</div><!-- end content container -->
+	<!-- END CONTENT -->
+	
+	<!-- BEGIN FOOTER -->
+	<div id="footer_container">
+		<div class="centercolumn">
+			<div id="foot">Copyright &copy;2010 <a href="#">{{title}}</a>. All rights reserved. </div>
+			<!-- end foot -->
+		</div><!-- end centercolumn -->
+	</div><!-- end bottom container -->
+	<!-- END FOOTER -->
+	
+</body>
+</html>

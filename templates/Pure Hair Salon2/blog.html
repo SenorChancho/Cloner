@@ -1,0 +1,106 @@
+<!doctype html>
+<html  prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{title_no_spaces}}.com/blog.html" />
+    <meta property="og:image" content="http://{{title_no_spaces}}.com/images/logo.png" />
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Blog</title>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/favicon.gif" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+<body>
+<div class="bg">
+    <!--start container-->
+    <div id="container">
+        <!--start header-->
+        <header>
+            <!--start logo-->
+            <a href="index.html" id="logo"><img src="images/logo.png" alt="logo"/></a>
+            <!--end logo-->
+            <!--start menu-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="current" href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!--end menu-->
+            <!--end header-->
+        </header>
+
+        <!--start holder-->
+        <div class="holder_content" id="trainerHeader">
+            <section id="artist">
+                <h1>Blog</h1>
+                <br>
+			<div class="blogrid">
+                <div class="blogposts">
+					<h2>{{article1_title}}</h2>
+                    <a href="blog1.html"><img src="images/blog1.jpg" alt=""></a>
+                    <p> {{article1_preview}}
+                        <br><a href="blog1.html"><span class="button">Read More</span></a>
+                    </p>
+                </div>
+                <div class="blogposts">
+					<h2>{{article2_title}}</h2>
+                    <a href="blog2.html"><img src="images/blog2.jpg" alt="" ></a>
+                    <p>{{article2_preview}}
+                        <br><a href="blog2.html"><span class="button">Read More</span></a>
+                    </p>
+                </div>
+                <div class="blogpoststhird">
+					<h2>{{article3_title}}</h2>
+                    <a href="blog3.html"><img src="images/blog3.jpg" alt=""></a>
+                    <p>{{article3_preview}}
+                        <br><a href="blog3.html"><span class="button">Read More</span></a>
+                    </p>
+                </div>
+                <div class="blogposts">
+					<h2>{{article4_title}}</h2>
+                    <a href="blog4.html"><img src="images/blog4.jpg" alt=""></a>
+                    <p> {{article4_preview}}
+                        <br><a href="blog4.html"><span class="button">Read More</span></a>
+                    </p>
+                </div>
+                <div class="blogposts">
+					<h2>{{article5_title}}</h2>
+                    <a href="blog5.html"><img src="images/blog5.jpg" alt="" ></a>
+                    <p>{{article5_preview}}
+                        <br><a href="blog5.html"><span class="button">Read More</span></a>
+                    </p>
+                </div>
+			</div>
+
+            </section>
+        </div>
+        <!--end holder-->
+        <!--start holder-->
+
+        <!--end holder-->
+    </div>
+    <!--end container-->
+    <!--start footer-->
+    <br>
+    <footer>
+        <div class="container">
+            <div id="FooterTwo"> © 2015 </div>
+            <div id="FooterTree"> {{title}} </div>
+        </div>
+    </footer>
+    <!--end footer-->
+</div>
+<!--end bg-->
+<!-- Free template distributed by http://freehtml5templates.com -->
+</body>
+</html>

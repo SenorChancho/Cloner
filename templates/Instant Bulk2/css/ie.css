@@ -1,0 +1,10 @@
+/* 
+
+{{title}} - CSS File
+
+*/
+#menu  li a {display:inline-block; font-family:Arial;}
+#menu  li a {display:block;}
+#menu  li a{font-size:16px;}
+#menu li ul li a{font-size:12px;}
+

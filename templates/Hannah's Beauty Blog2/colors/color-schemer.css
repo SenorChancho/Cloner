@@ -1,0 +1,335 @@
+::-moz-selection {
+  background: #e561b0;
+}
+
+::selection {
+  background: #e561b0;
+}
+
+/* link color */
+a:hover, a:focus, a:active {
+  color: #e561b0;
+}
+
+blockquote:before {
+  color: #e561b0;
+}
+blockquote cite, blockquote a, blockquote span {
+  color: #e561b0;
+}
+
+.more-link {
+  background: transparent;
+}
+.more-link:hover, .more-link:focus, .more-link:active:focus {
+  background: transparent;
+}
+
+.small-border {
+  background: #e561b0;
+}
+
+.ex-small-border::after {
+  background: #e561b0;
+}
+
+.comment-reply-link {
+  border-color: #e561b0;
+}
+.comment-reply-link:hover {
+  background: #e561b0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border-color: #e561b0;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background: #e561b0;
+}
+
+.btn-search {
+  background: #e561b0;
+}
+.btn-search:focus, .btn-search:active:focus {
+  background: #e561b0;
+}
+
+.continue-read {
+  color: #e561b0;
+}
+.continue-read:hover {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+
+.go-button:hover {
+  background: #e561b0;
+}
+
+#featured-slider .item .post-content .more-link-wrap .more-link:hover {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+#featured-slider .owl-controls .owl-nav div:hover i {
+  color: #e561b0;
+}
+
+/* Menu */
+.menu-list > li a:hover {
+  color: #e561b0;
+}
+
+.menu-submenu > li > a:hover,
+.menu-submenu .menu-submenu > li > a:hover,
+.menu-submenu .menu-submenu .menu-submenu > li > a:hover {
+  color: #e561b0 !important;
+}
+
+.menu-list > li.current-menu-item > a,
+.menu-list > li.current-menu-ancestor > a {
+  color: #e561b0 !important;
+}
+
+.menu-submenu .current-menu-item > a,
+.current-menu-ancestor .current-menu-ancestor > a {
+  color: #e561b0 !important;
+}
+
+@media (max-width: 992px) {
+  .menu-list > ul > li:hover > a,
+  .menu-list > ul > li.active > a {
+    color: #e561b0 !important;
+  }
+}
+.post-format {
+  color: #e561b0;
+}
+
+/* featured area */
+#featured-slider .item .post-content .more-link-wrap .more-link {
+  color: #e561b0;
+}
+
+/* Main content */
+.content-area .entry-header .entry-meta a:hover {
+  color: #e561b0;
+}
+.content-area .entry-content .edit-link:before {
+  color: #e561b0;
+}
+.content-area .entry-footer .button:hover {
+  background: #e561b0;
+}
+.content-area .entry-footer .comments-link:hover,
+.content-area .entry-footer .view-link:hover {
+  color: #e561b0;
+}
+.content-area .entry-footer .share-area a span:hover {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+.content-area .entry-footer .tags-links span:before {
+  color: #e561b0;
+}
+.content-area .format-link .post-link .icon-area i {
+  color: #e561b0;
+}
+.content-area .format-quote .quote-icon a span::before,
+.content-area .format-quote .quote-icon a span::after {
+  color: #e561b0;
+}
+
+.content-area .grid .entry-footer .share-area a:hover span {
+  color: #e561b0 !important;
+}
+
+.single-post .entry-content .tag a:hover {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+.single-post .entry-footer .post-format {
+  color: #e561b0;
+}
+.single-post .entry-footer .post-author a:hover {
+  color: #e561b0;
+}
+
+/* pagination */
+.navigation .nav-links > li.active a, .navigation .nav-links > li.active span {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+.navigation .nav-links > li a:hover {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+.navigation .nav-links li:first-child.nav-previous a:hover,
+.navigation .nav-links li:last-child.nav-next a:hover {
+  color: #e561b0;
+}
+.navigation > li.active a, .navigation > li.active span {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+.navigation .nav-previous > a::after {
+  background: #e561b0;
+}
+.navigation .nav-next > a::after {
+  background: #e561b0;
+}
+
+/* gallery */
+.gallery-one .owl-controls .owl-nav div,
+.gallery-two .full-view .owl-controls .owl-nav div {
+  color: #e561b0;
+}
+
+.gallery-one .owl-controls .owl-buttons div span, .gallery-two .owl-controls .owl-buttons div span {
+  color: #e561b0;
+}
+
+.gallery-two .list-view .owl-controls .owl-buttons div {
+  background: #e561b0;
+}
+
+.author-info .authors-social a:hover {
+  color: #e561b0;
+}
+
+.related-post .related-post-title span::before,
+.related-post .related-post-title span::after,
+.comments-area .comments-title span::before,
+.comments-area .comments-title span::after,
+.comment-reply-title span::before,
+.comment-reply-title span::after {
+  color: #e561b0;
+}
+
+/* Comments Section */
+/* Widget */
+.widget .widget-title::before,
+.widget .widget-title::after {
+  color: #e561b0;
+}
+
+.about-widget .more-link::after {
+  background: #e561b0;
+}
+
+.follow-us-area .follow-link .fa:hover {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+
+.item-meta a, .popular-item-meta a {
+  color: #e561b0;
+}
+
+.widget_categories li:hover > a,
+.widget_archive li:hover > a {
+  color: #e561b0;
+}
+
+.widget_categories li:hover > .count,
+.widget_archive li:hover > .count {
+  color: #e561b0;
+}
+
+.widget_categories li.current-cat > a,
+.widget_categories li.current-cat-parent > a,
+.widget_archive li.current-cat > a,
+.widget_archive li.current-cat-parent > a {
+  color: #e561b0;
+}
+
+.widget_categories li.current-cat > .count,
+.widget_categories li.current-cat-parent > .count,
+.widget_archive li.current-cat > .count,
+.widget_archive li.current-cat-parent > .count {
+  color: #e561b0;
+}
+
+.widget_tag_cloud .tagcloud a:hover {
+  background: #e561b0;
+  border-color: #e561b0;
+}
+
+.widget_calendar caption {
+  background: #e561b0;
+}
+
+.widget_calendar tbody a {
+  background: #e561b0;
+}
+
+.widget_links li a:hover,
+.widget_meta li a:hover,
+.widget_nav_menu li a:hover,
+.widget_pages li a:hover,
+.widget_recent_comments li a:hover,
+.widget_recent_entries li a:hover {
+  color: #e561b0;
+}
+.widget_links li span:hover:before,
+.widget_meta li span:hover:before,
+.widget_nav_menu li span:hover:before,
+.widget_pages li span:hover:before,
+.widget_recent_comments li span:hover:before,
+.widget_recent_entries li span:hover:before {
+  color: #e561b0;
+}
+
+.tp_recent_tweets li span a {
+  color: #e561b0;
+}
+
+.tp_recent_tweets li .twitter_time:before {
+  color: #e561b0;
+}
+
+.tp_recent_tweets li .twitter_time {
+  color: #e561b0;
+}
+
+.widget_glimmer_aboutus_contact .about-contact-area h3 span {
+  color: #e561b0;
+}
+.widget_glimmer_aboutus_contact .about-contact-area .about-mail i {
+  color: #e561b0;
+}
+
+.newsletter-area .form-newsletter #mc-embedded-subscribe:after {
+  background: #e561b0;
+}
+.newsletter-area .form-newsletter #mc-embedded-subscribe:hover, .newsletter-area .form-newsletter #mc-embedded-subscribe:focus, .newsletter-area .form-newsletter #mc-embedded-subscribe:active:focus {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+/* author page */
+/* Footer */
+#footer-top .widget .widget-title span::before,
+#footer-top .widget .widget-title span::after {
+  color: #e561b0;
+}
+
+#footer-middle .widget_tag_cloud .tagcloud a:hover {
+  border-color: #e561b0;
+  background: #e561b0;
+}
+#footer-middle .widget_categories ul li .count:hover,
+#footer-middle .widget_archive ul li .count:hover {
+  background: #e561b0;
+  border: 1px solid #e561b0;
+}
+
+.topbutton {
+  color: #e561b0;
+  border-color: #e561b0;
+}
