@@ -18,7 +18,7 @@ var terraHairDesign = require('./terraHairDesign.js');
 var beautyLifeEssentials = require('./beautyLifeEssentials.js');
 var scienceOfAthletics = require('./scienceOfAthletics.js');
 var hannahBeautyBlog = require('./hannahBeautyBlog.js');
-var strongEvo = require('./StrongEvo.js');
+var strongEvo = require('./strongEvo.js');
 
 const end_timeout = 5000;
 
