@@ -15,10 +15,10 @@ var pureHairSalon = require('./pureHairSalon.js');
 var lifeAndBeauty = require('./lifeAndBeauty.js');
 var instantBulk = require('./instantBulk.js');
 var terraHairDesign = require('./terraHairDesign.js');
-var beautyLifeEssentials = require('./beautyLifeEssentials');
-var scienceOfAthletics = require('./scienceOfAthletics');
-var hannahBeautyBlog = require('./hannahBeautyBlog');
-var strongEvo = require('./StrongEvo');
+var beautyLifeEssentials = require('./beautyLifeEssentials.js');
+var scienceOfAthletics = require('./scienceOfAthletics.js');
+var hannahBeautyBlog = require('./hannahBeautyBlog.js');
+var strongEvo = require('./StrongEvo.js');
 
 const end_timeout = 5000;
 
