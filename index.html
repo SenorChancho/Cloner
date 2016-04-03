@@ -29,6 +29,7 @@
         <option value="Science of Athletics2">Science of Athletics 2</option>
         <option value="Hannah's Beauty Blog" disabled>Hannah's Beauty Blog</option>
         <option value="Hannah's Beauty Blog2">Hannah's Beauty Blog 2</option>
+        <option value="Blogex">Blogex</option>
     </select>
 
     <label for="safe_site_name">Safe Site Name</label>
@@ -151,6 +152,9 @@
     <label for="action_phrase">Action Phrase</label>
     <input type="text" name="action_phrase" id="action_phrase" required>
 
+    <label for="action_photo">Action Photo</label>
+    <input class="drop adjust" type="file" name="action_photo" id="action_photo">
+
     <button id="createClone" type="submit">CREATE</button>
 </form>
 
@@ -205,6 +209,8 @@
 
         var $article4Set = $('#article4Set');
         var $article5Set = $('#article5Set');
+        var $actionPhoto = $('#action_photo');
+        var $actionPhotoLabel = $('label[for=action_photo], input#action_photo');
 
         $contact.hide().prop('required', false);
         $contactLabel.hide();
@@ -252,6 +258,10 @@
 
         $article4Set.hide();
         $article5Set.hide();
+
+        $actionPhoto.hide().prop('required', false);
+        $actionPhotoLabel.hide();
+
 
         var templateType = selectedValue.toString().replace(new RegExp("[0-9]", "g"), "");
         console.log(templateType);
@@ -396,6 +406,22 @@
                     $article4Set.show();
                     $article5Set.show();
                 }
+                break;
+            case "Blogex":
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $contactPhoto.show().prop('required', true);
+                $contactPhotoLabel.show();
+
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
+
+                $actionPhoto.show().prop('required', true);
+                $actionPhotoLabel.show();
+
+                $article4Set.show();
+                $article5Set.show();
                 break;
             default:
                 break;

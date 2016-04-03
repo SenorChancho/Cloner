@@ -1,0 +1,34 @@
+/*---------------------------------------------- 
+    For Retina display
+------------------------------------------------*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min--moz-device-pixel-ratio: 2) {
+
+
+    .overlay .overlay-close {
+        background: url("../images/retina/cross@2x.png");
+        -webkit-background-size: 20px 20px;
+        -moz-background-size: 20px 20px;
+        -o-background-size: 20px 20px;
+        background-size: 20px 20px;
+    }
+
+
+    .bx-wrapper .bx-prev {
+        background: url(../images/retina/carousel-sprite@2x.png) no-repeat 0 0px;
+    }
+
+    .bx-wrapper .bx-next {
+        background: url(../images/retina/carousel-sprite@2x.png) no-repeat -41px 0px;
+    }
+
+    .bx-wrapper .bx-prev, .bx-wrapper .bx-next {
+        -webkit-background-size: 81px 120px;
+        -moz-background-size: 81px 120px;
+        -o-background-size: 81px 120px;
+        background-size: 81px 120px;
+    }
+
+}

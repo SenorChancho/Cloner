@@ -19,6 +19,7 @@ var beautyLifeEssentials = require('./beautyLifeEssentials.js');
 var scienceOfAthletics = require('./scienceOfAthletics.js');
 var hannahBeautyBlog = require('./hannahBeautyBlog.js');
 var strongEvo = require('./strongEvo.js');
+var blogex = require('./blogex.js');
 
 const end_timeout = 5000;
 
@@ -190,6 +191,9 @@ app.post('/', function(req, res) {
         case "Hannah's Beauty Blog":
             hannahBeautyBlog.clone(req, safeSitePath);
             break;
+        case "Blogex":
+            blogex.clone(req, safeSitePath);
+            break;
         default:
             break;
     }
@@ -240,81 +244,3 @@ Array.prototype.last = function() {
     return this[this.length - 1];
 };
 
-//function helper.getFileName(req, oldName) {
-//    if (oldName === "blog1.html" || oldName === "blog2.html" || oldName === "blog3.html") {
-//        var newFileName = "";
-//
-//        if (oldName === "blog1.html") {
-//            newFileName = req.body.article1_title;
-//        }
-//        else if (oldName === "blog2.html") {
-//            newFileName = req.body.article2_title;
-//        }
-//        else {
-//            newFileName = req.body.article3_title;
-//        }
-//        newFileName = newFileName.toLowerCase();
-//        var fileWords = newFileName.split(' ');
-//        fileWords = fileWords.filter(function(x) { return badWords.indexOf(x) < 0});
-//        newFileName = fileWords.join(' ');
-//        newFileName = newFileName.replace(/[^\w\s]/gi, '');
-//        newFileName = newFileName.toCamelCase();
-//        newFileName = newFileName.trim();
-//
-//        return newFileName;
-//    }
-//
-//    return oldName.replace('.html', '');
-//}
-
-//function reSizePhoto(template, src, dest) {
-//    // Resize to template size
-//    var width = 0;
-//    var height = 0;
-//
-//    switch (template) {
-//        case "Strong Evo":
-//            width = 225;
-//            height = 154;
-//            break;
-//        case "Pure Hair Salon":
-//            width = 225;
-//            height = 225;
-//            break;
-//        case "Life and Beauty":
-//            width = 250;
-//            height = 160;
-//            break;
-//        case "Challenger Fit Blog":
-//            width = 250;
-//            height = 250;
-//            break;
-//        case "Instant Bulk":
-//            width = 225;
-//            height = 150;
-//            break;
-//        case "Terra Hair Design":
-//            width = 175;
-//            height = 200;
-//            break;
-//        default:
-//            break;
-//    }
-//    imageMagick(src)
-//        .resize(width, height, '^')
-//        .gravity('Center')
-//        .crop(width, height)
-//
-//        .write(src, function (err) {
-//            if (err) console.log(err);
-//            else {
-//                // Make OG copy
-//                imageMagick(src)
-//                    .resize(1200, 1200, '^')
-//                    .autoOrient()
-//                    .write(dest, function (err) {
-//                        if (err) console.log(err);
-//                    });
-//            }
-//        });
-//}
