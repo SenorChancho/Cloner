@@ -11,7 +11,7 @@ function clone(req, safeSitePath) {
     for (var index = 1; index <= articleCount; index++) {
         var endPath = path.join(safeSitePath, 'images', helper.getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
         var endPathog = path.join(safeSitePath, 'images', "og" + helper.getFileName(req, 'blog' + index.toString() + '.html') + ".jpg");
-        var endPathThumb = path.join(safeSitePath, 'images', helper.getArticleFileName(req, 'blog' + index.toString() + '.html') + "_thumb" + ".jpg");
+        var endPathThumb = path.join(safeSitePath, 'images', helper.getFileName(req, 'blog' + index.toString() + '.html') + "_thumb" + ".jpg");
 
         var fieldName = "article" + index.toString() + "_photo";
         var fieldNameIndex = helper.findWithAttr(req.files, "fieldname", fieldName);
