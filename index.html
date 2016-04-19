@@ -30,6 +30,7 @@
         <option value="Hannah's Beauty Blog" disabled>Hannah's Beauty Blog</option>
         <option value="Hannah's Beauty Blog2">Hannah's Beauty Blog 2</option>
         <option value="Blogex">Blogex</option>
+        <option value="Antelope Blog">Antelope Blog</option>
     </select>
 
     <label for="safe_site_name">Safe Site Name</label>
@@ -411,14 +412,24 @@
                 $contact.show().prop('required', true);
                 $contactLabel.show();
 
-                $contactPhoto.show().prop('required', true);
-                $contactPhotoLabel.show();
-
                 $aboutPhoto.show().prop('required', true);
                 $aboutPhotoLabel.show();
 
                 $actionPhoto.show().prop('required', true);
                 $actionPhotoLabel.show();
+
+                $article4Set.show();
+                $article5Set.show();
+                break;
+            case "Antelope Blog":
+                $contact.show().prop('required', true);
+                $contactLabel.show();
+
+                $contactPhoto.show().prop('required', true);
+                $contactPhotoLabel.show();
+
+                $aboutPhoto.show().prop('required', true);
+                $aboutPhotoLabel.show();
 
                 $article4Set.show();
                 $article5Set.show();

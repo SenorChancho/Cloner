@@ -20,6 +20,7 @@ var scienceOfAthletics = require('./scienceOfAthletics.js');
 var hannahBeautyBlog = require('./hannahBeautyBlog.js');
 var strongEvo = require('./strongEvo.js');
 var blogex = require('./blogex.js');
+var antelopeBlog = require('./antelopeBlog.js');
 
 const end_timeout = 5000;
 
@@ -193,6 +194,9 @@ app.post('/', function(req, res) {
             break;
         case "Blogex":
             blogex.clone(req, safeSitePath);
+            break;
+        case "Antelope Blog":
+            antelopeBlog.clone(req, safeSitePath);
             break;
         default:
             break;
